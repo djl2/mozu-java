@@ -552,73 +552,6 @@ public class ReturnResource {
 	}
 
 	/**
-	 * commerce-returns Get GetReasons description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 *	Return return = new Return();
-	 *	ReasonCollection reasonCollection = return.getReasons();
-	 * </code></pre></p>
-	 * @return com.mozu.api.contracts.commerceruntime.returns.ReasonCollection
-	 * @see com.mozu.api.contracts.commerceruntime.returns.ReasonCollection
-	 */
-	public com.mozu.api.contracts.commerceruntime.returns.ReasonCollection getReasons() throws Exception
-	{
-		return getReasons( null);
-	}
-
-	/**
-	 * commerce-returns Get GetReasons description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 *	Return return = new Return();
-	 *	CountDownLatch latch = return.getReasons( callback );
-	 *	latch.await()	 * </code></pre></p>
-	 * @param  callback callback handler for asynchronous operations
-	 * @return com.mozu.api.contracts.commerceruntime.returns.ReasonCollection
-	 * @see com.mozu.api.contracts.commerceruntime.returns.ReasonCollection
-	 */
-	public CountDownLatch getReasonsAsync( AsyncCallback<com.mozu.api.contracts.commerceruntime.returns.ReasonCollection> callback) throws Exception
-	{
-		return getReasonsAsync( null, callback);
-	}
-
-	/**
-	 * commerce-returns Get GetReasons description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 *	Return return = new Return();
-	 *	ReasonCollection reasonCollection = return.getReasons( responseFields);
-	 * </code></pre></p>
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
-	 * @return com.mozu.api.contracts.commerceruntime.returns.ReasonCollection
-	 * @see com.mozu.api.contracts.commerceruntime.returns.ReasonCollection
-	 */
-	public com.mozu.api.contracts.commerceruntime.returns.ReasonCollection getReasons(String responseFields) throws Exception
-	{
-		MozuClient<com.mozu.api.contracts.commerceruntime.returns.ReasonCollection> client = com.mozu.api.clients.commerce.ReturnClient.getReasonsClient( responseFields);
-		client.setContext(_apiContext);
-		client.executeRequest();
-		return client.getResult();
-
-	}
-
-	/**
-	 * commerce-returns Get GetReasons description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 *	Return return = new Return();
-	 *	CountDownLatch latch = return.getReasons( responseFields, callback );
-	 *	latch.await()	 * </code></pre></p>
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
-	 * @param  callback callback handler for asynchronous operations
-	 * @return com.mozu.api.contracts.commerceruntime.returns.ReasonCollection
-	 * @see com.mozu.api.contracts.commerceruntime.returns.ReasonCollection
-	 */
-	public CountDownLatch getReasonsAsync(String responseFields, AsyncCallback<com.mozu.api.contracts.commerceruntime.returns.ReasonCollection> callback) throws Exception
-	{
-		MozuClient<com.mozu.api.contracts.commerceruntime.returns.ReasonCollection> client = com.mozu.api.clients.commerce.ReturnClient.getReasonsClient( responseFields);
-		client.setContext(_apiContext);
-		return client.executeRequest(callback);
-
-	}
-
-	/**
 	 * Creates a return for previously fulfilled items. Each return must either be associated with an original order or a product definition to represent each returned item.
 	 * <p><pre><code>
 	 *	Return return = new Return();
@@ -1089,12 +1022,12 @@ public class ReturnResource {
 	}
 
 	/**
-	 * commerce-returns Put ResendReturnEmail description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Return return = new Return();
 	 *	return.resendReturnEmail( action);
 	 * </code></pre></p>
-	 * @param action Properties of an action a user can perform for a return.
+	 * @param action 
 	 * @return 
 	 * @see com.mozu.api.contracts.commerceruntime.returns.ReturnAction
 	 */

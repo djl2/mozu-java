@@ -15,7 +15,6 @@ public class ProductSearchResultUrl
 
 	/**
 	 * Get Resource Url for Search
-	 * @param enableSearchTuningRules 
 	 * @param facet Individually list the facet fields you want to display in a web storefront product search.
 	 * @param facetFieldRangeQuery Display a range facet not specified in a template in a web storefront product search by listing the facet field and the range to display.
 	 * @param facetHierDepth If filtering using category facets in a hierarchy, the number of category hierarchy levels to return for the facet. This option is only available for category facets.
@@ -25,7 +24,6 @@ public class ProductSearchResultUrl
 	 * @param facetSettings Settings reserved for future facet search functionality on a web storefront product search.
 	 * @param facetStartIndex When paging through multiple facets, the startIndex value for each facet.
 	 * @param facetTemplate The facet template to use on the storefront. A template displays all facets associated with the template on the web storefront product search. Currently, only category-level facet templates are available.
-	 * @param facetTemplateExclude 
 	 * @param facetTemplateSubset Display a subset of the facets defined in the template specified in facetTemplate parameter.
 	 * @param facetValueFilter The facet values to apply to the filter.
 	 * @param filter A set of filter expressions representing the search parameters for a query: eq=equals, ne=not equals, gt=greater than, lt = less than or equals, gt = greater than or equals, lt = less than or equals, sw = starts with, or cont = contains. Optional.
@@ -33,16 +31,13 @@ public class ProductSearchResultUrl
 	 * @param query A query entered for searches and facet range.
 	 * @param responseFields Use this field to include those fields which are not included by default.
 	 * @param searchSettings 
-	 * @param searchTuningRuleCode 
-	 * @param searchTuningRuleContext 
 	 * @param sortBy 
 	 * @param startIndex 
 	 * @return   String Resource Url
 	 */
-	public static MozuUrl searchUrl(Boolean enableSearchTuningRules, String facet, String facetFieldRangeQuery, String facetHierDepth, String facetHierPrefix, String facetHierValue, String facetPageSize, String facetSettings, String facetStartIndex, String facetTemplate, String facetTemplateExclude, String facetTemplateSubset, String facetValueFilter, String filter, Integer pageSize, String query, String responseFields, String searchSettings, String searchTuningRuleCode, String searchTuningRuleContext, String sortBy, Integer startIndex)
+	public static MozuUrl searchUrl(String facet, String facetFieldRangeQuery, String facetHierDepth, String facetHierPrefix, String facetHierValue, String facetPageSize, String facetSettings, String facetStartIndex, String facetTemplate, String facetTemplateSubset, String facetValueFilter, String filter, Integer pageSize, String query, String responseFields, String searchSettings, String sortBy, Integer startIndex)
 	{
-		UrlFormatter formatter = new UrlFormatter("/api/commerce/catalog/storefront/productsearch/search/?query={query}&filter={filter}&facetTemplate={facetTemplate}&facetTemplateSubset={facetTemplateSubset}&facet={facet}&facetFieldRangeQuery={facetFieldRangeQuery}&facetHierPrefix={facetHierPrefix}&facetHierValue={facetHierValue}&facetHierDepth={facetHierDepth}&facetStartIndex={facetStartIndex}&facetPageSize={facetPageSize}&facetSettings={facetSettings}&facetValueFilter={facetValueFilter}&sortBy={sortBy}&pageSize={pageSize}&startIndex={startIndex}&searchSettings={searchSettings}&enableSearchTuningRules={enableSearchTuningRules}&searchTuningRuleContext={searchTuningRuleContext}&searchTuningRuleCode={searchTuningRuleCode}&facetTemplateExclude={facetTemplateExclude}&responseFields={responseFields}");
-		formatter.formatUrl("enableSearchTuningRules", enableSearchTuningRules);
+		UrlFormatter formatter = new UrlFormatter("/api/commerce/catalog/storefront/productsearch/search/?query={query}&filter={filter}&facetTemplate={facetTemplate}&facetTemplateSubset={facetTemplateSubset}&facet={facet}&facetFieldRangeQuery={facetFieldRangeQuery}&facetHierPrefix={facetHierPrefix}&facetHierValue={facetHierValue}&facetHierDepth={facetHierDepth}&facetStartIndex={facetStartIndex}&facetPageSize={facetPageSize}&facetSettings={facetSettings}&facetValueFilter={facetValueFilter}&sortBy={sortBy}&pageSize={pageSize}&startIndex={startIndex}&responseFields={responseFields}");
 		formatter.formatUrl("facet", facet);
 		formatter.formatUrl("facetFieldRangeQuery", facetFieldRangeQuery);
 		formatter.formatUrl("facetHierDepth", facetHierDepth);
@@ -52,7 +47,6 @@ public class ProductSearchResultUrl
 		formatter.formatUrl("facetSettings", facetSettings);
 		formatter.formatUrl("facetStartIndex", facetStartIndex);
 		formatter.formatUrl("facetTemplate", facetTemplate);
-		formatter.formatUrl("facetTemplateExclude", facetTemplateExclude);
 		formatter.formatUrl("facetTemplateSubset", facetTemplateSubset);
 		formatter.formatUrl("facetValueFilter", facetValueFilter);
 		formatter.formatUrl("filter", filter);
@@ -60,8 +54,6 @@ public class ProductSearchResultUrl
 		formatter.formatUrl("query", query);
 		formatter.formatUrl("responseFields", responseFields);
 		formatter.formatUrl("searchSettings", searchSettings);
-		formatter.formatUrl("searchTuningRuleCode", searchTuningRuleCode);
-		formatter.formatUrl("searchTuningRuleContext", searchTuningRuleContext);
 		formatter.formatUrl("sortBy", sortBy);
 		formatter.formatUrl("startIndex", startIndex);
 		return new MozuUrl(formatter.getResourceUrl(), MozuUrl.UrlLocation.TENANT_POD) ;

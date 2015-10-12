@@ -61,9 +61,6 @@ public class RateRequestItem implements Serializable
 		this.shipsByItself = shipsByItself;
 	}
 
-	/**
-	 * Mozu.ShippingRuntime.Contracts.RateRequestItem data ApiTypeMember DOCUMENT_HERE 
-	 */
 	protected com.fasterxml.jackson.databind.JsonNode data;
 
 	public com.fasterxml.jackson.databind.JsonNode getData() {

@@ -10,7 +10,6 @@ import java.util.List;
 import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.joda.time.DateTime;
-import com.mozu.api.contracts.productadmin.ActiveDateRange;
 import com.mozu.api.contracts.core.AuditInfo;
 import com.mozu.api.contracts.productadmin.ProductLocalizedContent;
 import com.mozu.api.contracts.productadmin.ProductPrice;
@@ -37,19 +36,6 @@ public class ProductInCatalogInfo implements Serializable
 
 	public void setCatalogId(Integer catalogId) {
 		this.catalogId = catalogId;
-	}
-
-	/**
-	 * Date this product was first Available for sale in the catalog. This is utilized in expressions that refrence DaysInCatloag.
-	 */
-	protected DateTime dateFirstAvailableInCatalog;
-
-	public DateTime getDateFirstAvailableInCatalog() {
-		return this.dateFirstAvailableInCatalog;
-	}
-
-	public void setDateFirstAvailableInCatalog(DateTime dateFirstAvailableInCatalog) {
-		this.dateFirstAvailableInCatalog = dateFirstAvailableInCatalog;
 	}
 
 	/**
@@ -102,19 +88,6 @@ public class ProductInCatalogInfo implements Serializable
 
 	public void setIsseoContentOverridden(Boolean isseoContentOverridden) {
 		this.isseoContentOverridden = isseoContentOverridden;
-	}
-
-	/**
-	 * If true, the product is marked as available for sale in the catalog. Setting a product to IsActive = false will prevent it from being shown on the customer facing storefront.
-	 */
-	protected ActiveDateRange activeDateRange;
-
-	public ActiveDateRange getActiveDateRange() {
-		return this.activeDateRange;
-	}
-
-	public void setActiveDateRange(ActiveDateRange activeDateRange) {
-		this.activeDateRange = activeDateRange;
 	}
 
 	/**

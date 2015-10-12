@@ -32,9 +32,6 @@ public class CustomerLoginInfo implements Serializable
 		this.emailAddress = emailAddress;
 	}
 
-	/**
-	 * Mozu.Customer.Contracts.CustomerLoginInfo externalPassword ApiTypeMember DOCUMENT_HERE 
-	 */
 	protected String externalPassword;
 
 	public String getExternalPassword() {

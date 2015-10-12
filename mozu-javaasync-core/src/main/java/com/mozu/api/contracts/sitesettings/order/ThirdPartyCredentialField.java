@@ -6,11 +6,9 @@
  */
 package com.mozu.api.contracts.sitesettings.order;
 
-import java.util.List;
 import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.joda.time.DateTime;
-import com.mozu.api.contracts.sitesettings.order.VocabularyValue;
 
 /**
  *	The properties of the credentials required to communicate with the external payment processor.
@@ -48,32 +46,6 @@ public class ThirdPartyCredentialField implements Serializable
 	}
 
 	/**
-	 * The type of input selection used to define a value for the attribute, including Yes/No, Date, DateTime, List, TextBox, or TextArea.
-	 */
-	protected String inputType;
-
-	public String getInputType() {
-		return this.inputType;
-	}
-
-	public void setInputType(String inputType) {
-		this.inputType = inputType;
-	}
-
-	/**
-	 * the value holds sensitive information.
-	 */
-	protected Boolean isSensitive;
-
-	public Boolean getIsSensitive() {
-		return this.isSensitive;
-	}
-
-	public void setIsSensitive(Boolean isSensitive) {
-		this.isSensitive = isSensitive;
-	}
-
-	/**
 	 * The value of a property, used by numerous objects within Mozu including facets, attributes, products, localized content, metadata, capabilities (Mozu and third-party), location inventory adjustment, and more. The value may be a string, integer, or double. Validation may be run against the entered and saved values depending on the object type.
 	 */
 	protected String value;
@@ -84,17 +56,6 @@ public class ThirdPartyCredentialField implements Serializable
 
 	public void setValue(String value) {
 		this.value = value;
-	}
-
-	/**
-	 * List of valid vocabulary values defined for an attribute.
-	 */
-	protected List<VocabularyValue> vocabularyValues;
-	public List<VocabularyValue> getVocabularyValues() {
-		return this.vocabularyValues;
-	}
-	public void setVocabularyValues(List<VocabularyValue> vocabularyValues) {
-		this.vocabularyValues = vocabularyValues;
 	}
 
 }

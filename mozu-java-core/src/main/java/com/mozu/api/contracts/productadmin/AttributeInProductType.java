@@ -36,9 +36,6 @@ public class AttributeInProductType implements Serializable
 		this.attributeFQN = attributeFQN;
 	}
 
-	/**
-	 * If true, this property is not available on the storefront. If false, this property will be available on storefront. The IsHiddenProperty hides the property from the customer, but is still available from the API.
-	 */
 	protected Boolean isAdminOnlyProperty;
 
 	public Boolean getIsAdminOnlyProperty() {

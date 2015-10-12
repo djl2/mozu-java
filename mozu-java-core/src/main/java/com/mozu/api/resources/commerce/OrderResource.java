@@ -258,47 +258,6 @@ public class OrderResource {
 	}
 
 	/**
-	 * commerce-orders Put ProcessDigitalWallet description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 *	Order order = new Order();
-	 *	Order order = order.processDigitalWallet( digitalWallet,  orderId,  digitalWalletType);
-	 * </code></pre></p>
-	 * @param digitalWalletType 
-	 * @param orderId Unique identifier of the order.
-	 * @param digitalWallet Mozu.CommerceRuntime.Contracts.Orders.DigitalWallet ApiType DOCUMENT_HERE 
-	 * @return com.mozu.api.contracts.commerceruntime.orders.Order
-	 * @see com.mozu.api.contracts.commerceruntime.orders.Order
-	 * @see com.mozu.api.contracts.commerceruntime.orders.DigitalWallet
-	 */
-	public com.mozu.api.contracts.commerceruntime.orders.Order processDigitalWallet(com.mozu.api.contracts.commerceruntime.orders.DigitalWallet digitalWallet, String orderId, String digitalWalletType) throws Exception
-	{
-		return processDigitalWallet( digitalWallet,  orderId,  digitalWalletType,  null);
-	}
-
-	/**
-	 * commerce-orders Put ProcessDigitalWallet description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 *	Order order = new Order();
-	 *	Order order = order.processDigitalWallet( digitalWallet,  orderId,  digitalWalletType,  responseFields);
-	 * </code></pre></p>
-	 * @param digitalWalletType 
-	 * @param orderId Unique identifier of the order.
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
-	 * @param digitalWallet Mozu.CommerceRuntime.Contracts.Orders.DigitalWallet ApiType DOCUMENT_HERE 
-	 * @return com.mozu.api.contracts.commerceruntime.orders.Order
-	 * @see com.mozu.api.contracts.commerceruntime.orders.Order
-	 * @see com.mozu.api.contracts.commerceruntime.orders.DigitalWallet
-	 */
-	public com.mozu.api.contracts.commerceruntime.orders.Order processDigitalWallet(com.mozu.api.contracts.commerceruntime.orders.DigitalWallet digitalWallet, String orderId, String digitalWalletType, String responseFields) throws Exception
-	{
-		MozuClient<com.mozu.api.contracts.commerceruntime.orders.Order> client = com.mozu.api.clients.commerce.OrderClient.processDigitalWalletClient( digitalWallet,  orderId,  digitalWalletType,  responseFields);
-		client.setContext(_apiContext);
-		client.executeRequest();
-		return client.getResult();
-
-	}
-
-	/**
 	 * Update the properties of a discount applied to an order.
 	 * <p><pre><code>
 	 *	Order order = new Order();
@@ -375,13 +334,13 @@ public class OrderResource {
 	}
 
 	/**
-	 * commerce-orders Put ResendOrderConfirmationEmail description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Order order = new Order();
 	 *	order.resendOrderConfirmationEmail( action,  orderId);
 	 * </code></pre></p>
-	 * @param orderId Unique identifier of the order.
-	 * @param action The action to perform for the order.
+	 * @param orderId 
+	 * @param action 
 	 * @return 
 	 * @see com.mozu.api.contracts.commerceruntime.orders.OrderAction
 	 */

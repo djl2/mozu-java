@@ -33,32 +33,6 @@ public class DocumentDraftSummary implements Serializable
 	}
 
 	/**
-	 * Mozu.Content.Contracts.DocumentDraftSummary activeUpdatedBy ApiTypeMember DOCUMENT_HERE 
-	 */
-	protected String activeUpdatedBy;
-
-	public String getActiveUpdatedBy() {
-		return this.activeUpdatedBy;
-	}
-
-	public void setActiveUpdatedBy(String activeUpdatedBy) {
-		this.activeUpdatedBy = activeUpdatedBy;
-	}
-
-	/**
-	 * The unique identifier for the product catalog. Catalogs are part of a master catalog.
-	 */
-	protected Integer catalogId;
-
-	public Integer getCatalogId() {
-		return this.catalogId;
-	}
-
-	public void setCatalogId(Integer catalogId) {
-		this.catalogId = catalogId;
-	}
-
-	/**
 	 * Fully qualified name of the document type. 
 	 */
 	protected String documentTypeFQN;
@@ -111,19 +85,6 @@ public class DocumentDraftSummary implements Serializable
 	}
 
 	/**
-	 * Unique identifier for the master catalog. 
-	 */
-	protected Integer masterCatalogId;
-
-	public Integer getMasterCatalogId() {
-		return this.masterCatalogId;
-	}
-
-	public void setMasterCatalogId(Integer masterCatalogId) {
-		this.masterCatalogId = masterCatalogId;
-	}
-
-	/**
 	 * The display name of the source product property. For a product field it will be the display name of the field. For a product attribute it will be the Attribute Name.
 	 */
 	protected String name;
@@ -137,19 +98,6 @@ public class DocumentDraftSummary implements Serializable
 	}
 
 	/**
-	 * Mozu.Content.Contracts.DocumentDraftSummary publishSetCode ApiTypeMember DOCUMENT_HERE 
-	 */
-	protected String publishSetCode;
-
-	public String getPublishSetCode() {
-		return this.publishSetCode;
-	}
-
-	public void setPublishSetCode(String publishSetCode) {
-		this.publishSetCode = publishSetCode;
-	}
-
-	/**
 	 * Whether the draft has been published.
 	 */
 	protected String publishType;
@@ -160,19 +108,6 @@ public class DocumentDraftSummary implements Serializable
 
 	public void setPublishType(String publishType) {
 		this.publishType = publishType;
-	}
-
-	/**
-	 * Unique identifier for the site. This ID is used at all levels of a store, catalog, and tenant to associate objects to a site.
-	 */
-	protected Integer siteId;
-
-	public Integer getSiteId() {
-		return this.siteId;
-	}
-
-	public void setSiteId(Integer siteId) {
-		this.siteId = siteId;
 	}
 
 	/**

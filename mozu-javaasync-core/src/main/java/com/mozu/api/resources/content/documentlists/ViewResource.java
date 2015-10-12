@@ -48,7 +48,7 @@ public class ViewResource {
 	 */
 	public com.mozu.api.contracts.content.DocumentCollection getViewDocuments(String documentListName, String viewName) throws Exception
 	{
-		return getViewDocuments( documentListName,  viewName,  null,  null,  null,  null,  null,  null);
+		return getViewDocuments( documentListName,  viewName,  null,  null,  null,  null,  null);
 	}
 
 	/**
@@ -65,18 +65,17 @@ public class ViewResource {
 	 */
 	public CountDownLatch getViewDocumentsAsync(String documentListName, String viewName, AsyncCallback<com.mozu.api.contracts.content.DocumentCollection> callback) throws Exception
 	{
-		return getViewDocumentsAsync( documentListName,  viewName,  null,  null,  null,  null,  null,  null, callback);
+		return getViewDocumentsAsync( documentListName,  viewName,  null,  null,  null,  null,  null, callback);
 	}
 
 	/**
 	 * Retrieves a collection of documents associated with a view.
 	 * <p><pre><code>
 	 *	View view = new View();
-	 *	DocumentCollection documentCollection = view.getViewDocuments( documentListName,  viewName,  filter,  sortBy,  pageSize,  startIndex,  includeInactive,  responseFields);
+	 *	DocumentCollection documentCollection = view.getViewDocuments( documentListName,  viewName,  filter,  sortBy,  pageSize,  startIndex,  responseFields);
 	 * </code></pre></p>
 	 * @param documentListName Name of content documentListName to delete
 	 * @param filter A set of expressions that consist of a field, operator, and value and represent search parameter syntax when filtering results of a query. Valid operators include equals (eq), does not equal (ne), greater than (gt), less than (lt), greater than or equal to (ge), less than or equal to (le), starts with (sw), or contains (cont). For example - "filter=IsDisplayed+eq+true"
-	 * @param includeInactive 
 	 * @param pageSize The number of results to display on each page when creating paged results from a query. The amount is divided and displayed on the `pageCount `amount of pages. The default is 20 and maximum value is 200 per page.
 	 * @param responseFields Use this field to include those fields which are not included by default.
 	 * @param sortBy The element to sort the results by and the channel in which the results appear. Either ascending (a-z) or descending (z-a) channel. Optional.
@@ -85,9 +84,9 @@ public class ViewResource {
 	 * @return com.mozu.api.contracts.content.DocumentCollection
 	 * @see com.mozu.api.contracts.content.DocumentCollection
 	 */
-	public com.mozu.api.contracts.content.DocumentCollection getViewDocuments(String documentListName, String viewName, String filter, String sortBy, Integer pageSize, Integer startIndex, Boolean includeInactive, String responseFields) throws Exception
+	public com.mozu.api.contracts.content.DocumentCollection getViewDocuments(String documentListName, String viewName, String filter, String sortBy, Integer pageSize, Integer startIndex, String responseFields) throws Exception
 	{
-		MozuClient<com.mozu.api.contracts.content.DocumentCollection> client = com.mozu.api.clients.content.documentlists.ViewClient.getViewDocumentsClient( documentListName,  viewName,  filter,  sortBy,  pageSize,  startIndex,  includeInactive,  responseFields);
+		MozuClient<com.mozu.api.contracts.content.DocumentCollection> client = com.mozu.api.clients.content.documentlists.ViewClient.getViewDocumentsClient( documentListName,  viewName,  filter,  sortBy,  pageSize,  startIndex,  responseFields);
 		client.setContext(_apiContext);
 		client.executeRequest();
 		return client.getResult();
@@ -98,11 +97,10 @@ public class ViewResource {
 	 * Retrieves a collection of documents associated with a view.
 	 * <p><pre><code>
 	 *	View view = new View();
-	 *	CountDownLatch latch = view.getViewDocuments( documentListName,  viewName,  filter,  sortBy,  pageSize,  startIndex,  includeInactive,  responseFields, callback );
+	 *	CountDownLatch latch = view.getViewDocuments( documentListName,  viewName,  filter,  sortBy,  pageSize,  startIndex,  responseFields, callback );
 	 *	latch.await()	 * </code></pre></p>
 	 * @param documentListName Name of content documentListName to delete
 	 * @param filter A set of expressions that consist of a field, operator, and value and represent search parameter syntax when filtering results of a query. Valid operators include equals (eq), does not equal (ne), greater than (gt), less than (lt), greater than or equal to (ge), less than or equal to (le), starts with (sw), or contains (cont). For example - "filter=IsDisplayed+eq+true"
-	 * @param includeInactive 
 	 * @param pageSize The number of results to display on each page when creating paged results from a query. The amount is divided and displayed on the `pageCount `amount of pages. The default is 20 and maximum value is 200 per page.
 	 * @param responseFields Use this field to include those fields which are not included by default.
 	 * @param sortBy The element to sort the results by and the channel in which the results appear. Either ascending (a-z) or descending (z-a) channel. Optional.
@@ -112,9 +110,9 @@ public class ViewResource {
 	 * @return com.mozu.api.contracts.content.DocumentCollection
 	 * @see com.mozu.api.contracts.content.DocumentCollection
 	 */
-	public CountDownLatch getViewDocumentsAsync(String documentListName, String viewName, String filter, String sortBy, Integer pageSize, Integer startIndex, Boolean includeInactive, String responseFields, AsyncCallback<com.mozu.api.contracts.content.DocumentCollection> callback) throws Exception
+	public CountDownLatch getViewDocumentsAsync(String documentListName, String viewName, String filter, String sortBy, Integer pageSize, Integer startIndex, String responseFields, AsyncCallback<com.mozu.api.contracts.content.DocumentCollection> callback) throws Exception
 	{
-		MozuClient<com.mozu.api.contracts.content.DocumentCollection> client = com.mozu.api.clients.content.documentlists.ViewClient.getViewDocumentsClient( documentListName,  viewName,  filter,  sortBy,  pageSize,  startIndex,  includeInactive,  responseFields);
+		MozuClient<com.mozu.api.contracts.content.DocumentCollection> client = com.mozu.api.clients.content.documentlists.ViewClient.getViewDocumentsClient( documentListName,  viewName,  filter,  sortBy,  pageSize,  startIndex,  responseFields);
 		client.setContext(_apiContext);
 		return client.executeRequest(callback);
 

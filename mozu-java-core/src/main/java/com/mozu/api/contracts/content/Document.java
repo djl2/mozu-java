@@ -9,7 +9,6 @@ package com.mozu.api.contracts.content;
 import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.joda.time.DateTime;
-import com.mozu.api.contracts.content.ActiveDateRange;
 
 /**
  *	The document properties that define the content used by the content management system (CMS).
@@ -138,19 +137,6 @@ public class Document implements Serializable
 	}
 
 	/**
-	 * The name of the publish set that this document belongs to, if any.
-	 */
-	protected String publishSetCode;
-
-	public String getPublishSetCode() {
-		return this.publishSetCode;
-	}
-
-	public void setPublishSetCode(String publishSetCode) {
-		this.publishSetCode = publishSetCode;
-	}
-
-	/**
 	 * The current state of the document or product definition. States for documents include Active, Draft, or Latest. Active documents are published and cannot be deleted. Querying Latest returns the most recent version of the document, regardless of whether it is published or a draft. States for product include New, Draft, or Live.
 	 */
 	protected String publishState;
@@ -174,19 +160,6 @@ public class Document implements Serializable
 
 	public void setUpdateDate(DateTime updateDate) {
 		this.updateDate = updateDate;
-	}
-
-	/**
-	 * Mozu.Content.Contracts.Document activeDateRange ApiTypeMember DOCUMENT_HERE 
-	 */
-	protected ActiveDateRange activeDateRange;
-
-	public ActiveDateRange getActiveDateRange() {
-		return this.activeDateRange;
-	}
-
-	public void setActiveDateRange(ActiveDateRange activeDateRange) {
-		this.activeDateRange = activeDateRange;
 	}
 
 	/**

@@ -22,16 +22,6 @@ public class BillingInfo implements Serializable
 	// Default Serial Version UID
 	private static final long serialVersionUID = 1L;
 
-	protected String externalTransactionId;
-
-	public String getExternalTransactionId() {
-		return this.externalTransactionId;
-	}
-
-	public void setExternalTransactionId(String externalTransactionId) {
-		this.externalTransactionId = externalTransactionId;
-	}
-
 	/**
 	 * If true, the system overrides the customer's billing address information with the supplied fulfillment information.
 	 */
@@ -56,19 +46,6 @@ public class BillingInfo implements Serializable
 
 	public void setPaymentType(String paymentType) {
 		this.paymentType = paymentType;
-	}
-
-	/**
-	 * Mozu.CommerceRuntime.Contracts.Payments.BillingInfo paymentWorkflow ApiTypeMember DOCUMENT_HERE 
-	 */
-	protected String paymentWorkflow;
-
-	public String getPaymentWorkflow() {
-		return this.paymentWorkflow;
-	}
-
-	public void setPaymentWorkflow(String paymentWorkflow) {
-		this.paymentWorkflow = paymentWorkflow;
 	}
 
 	/**
@@ -121,16 +98,6 @@ public class BillingInfo implements Serializable
 
 	public void setCard(PaymentCard card) {
 		this.card = card;
-	}
-
-	protected com.fasterxml.jackson.databind.JsonNode data;
-
-	public com.fasterxml.jackson.databind.JsonNode getData() {
-		return this.data;
-	}
-
-	public void setData(com.fasterxml.jackson.databind.JsonNode data) {
-		this.data = data;
 	}
 
 }

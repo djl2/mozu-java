@@ -32,9 +32,6 @@ public class ChangeMessage implements Serializable
 		this.amount = amount;
 	}
 
-	/**
-	 * Unique identifier of an app available in your Mozu tenant or within Mozu Dev Center. This ID is unique across all apps installed, initialized, and enabled in the Mozu Admin and those in development through the Dev Center Console.
-	 */
 	protected String appId;
 
 	public String getAppId() {
@@ -45,9 +42,6 @@ public class ChangeMessage implements Serializable
 		this.appId = appId;
 	}
 
-	/**
-	 * The application's key.
-	 */
 	protected String appKey;
 
 	public String getAppKey() {
@@ -58,9 +52,6 @@ public class ChangeMessage implements Serializable
 		this.appKey = appKey;
 	}
 
-	/**
-	 * The application's name.
-	 */
 	protected String appName;
 
 	public String getAppName() {
@@ -71,9 +62,6 @@ public class ChangeMessage implements Serializable
 		this.appName = appName;
 	}
 
-	/**
-	 * The unique identifier of the API request associated with the event action, which might contain multiple actions.
-	 */
 	protected String correlationId;
 
 	public String getCorrelationId() {
@@ -136,9 +124,6 @@ public class ChangeMessage implements Serializable
 		this.message = message;
 	}
 
-	/**
-	 * Metadata content for entities, used by document lists, document type lists, document type, views, entity lists, and list views.
-	 */
 	protected Object metadata;
 
 	public Object getMetadata() {
@@ -214,9 +199,6 @@ public class ChangeMessage implements Serializable
 		this.success = success;
 	}
 
-	/**
-	 * The user's first name.
-	 */
 	protected String userFirstName;
 
 	public String getUserFirstName() {
@@ -240,9 +222,6 @@ public class ChangeMessage implements Serializable
 		this.userId = userId;
 	}
 
-	/**
-	 * The user's last name.
-	 */
 	protected String userLastName;
 
 	public String getUserLastName() {
@@ -253,9 +232,6 @@ public class ChangeMessage implements Serializable
 		this.userLastName = userLastName;
 	}
 
-	/**
-	 * The user type (e.g. Shopper, Admin, etc.).
-	 */
 	protected String userScopeType;
 
 	public String getUserScopeType() {

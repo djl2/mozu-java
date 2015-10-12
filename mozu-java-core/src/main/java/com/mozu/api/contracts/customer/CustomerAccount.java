@@ -14,7 +14,6 @@ import com.mozu.api.contracts.customer.CustomerAttribute;
 import com.mozu.api.contracts.core.AuditInfo;
 import com.mozu.api.contracts.customer.CommerceSummary;
 import com.mozu.api.contracts.customer.CustomerContact;
-import com.mozu.api.contracts.customer.CurrencyAmount;
 import com.mozu.api.contracts.customer.CustomerNote;
 import com.mozu.api.contracts.customer.CustomerSegment;
 
@@ -51,19 +50,6 @@ public class CustomerAccount implements Serializable
 
 	public void setCompanyOrOrganization(String companyOrOrganization) {
 		this.companyOrOrganization = companyOrOrganization;
-	}
-
-	/**
-	 * Mozu.Customer.Contracts.CustomerAccount customerSinceDate ApiTypeMember DOCUMENT_HERE 
-	 */
-	protected DateTime customerSinceDate;
-
-	public DateTime getCustomerSinceDate() {
-		return this.customerSinceDate;
-	}
-
-	public void setCustomerSinceDate(DateTime customerSinceDate) {
-		this.customerSinceDate = customerSinceDate;
 	}
 
 	/**
@@ -105,9 +91,6 @@ public class CustomerAccount implements Serializable
 		this.firstName = firstName;
 	}
 
-	/**
-	 * Indicates if an external password is set on this account
-	 */
 	protected Boolean hasExternalPassword;
 
 	public Boolean getHasExternalPassword() {
@@ -181,19 +164,6 @@ public class CustomerAccount implements Serializable
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-	}
-
-	/**
-	 * Mozu.Customer.Contracts.CustomerAccount lifeTimeValueSetDate ApiTypeMember DOCUMENT_HERE 
-	 */
-	protected DateTime lifeTimeValueSetDate;
-
-	public DateTime getLifeTimeValueSetDate() {
-		return this.lifeTimeValueSetDate;
-	}
-
-	public void setLifeTimeValueSetDate(DateTime lifeTimeValueSetDate) {
-		this.lifeTimeValueSetDate = lifeTimeValueSetDate;
 	}
 
 	/**
@@ -307,19 +277,6 @@ public class CustomerAccount implements Serializable
 	}
 	public void setContacts(List<CustomerContact> contacts) {
 		this.contacts = contacts;
-	}
-
-	/**
-	 * Mozu.Customer.Contracts.CustomerAccount lifetimeValue ApiTypeMember DOCUMENT_HERE 
-	 */
-	protected CurrencyAmount lifetimeValue;
-
-	public CurrencyAmount getLifetimeValue() {
-		return this.lifetimeValue;
-	}
-
-	public void setLifetimeValue(CurrencyAmount lifetimeValue) {
-		this.lifetimeValue = lifetimeValue;
 	}
 
 	/**

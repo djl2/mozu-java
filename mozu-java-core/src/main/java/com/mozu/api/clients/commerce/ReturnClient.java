@@ -329,46 +329,6 @@ public class ReturnClient {
 	}
 
 	/**
-	 * commerce-returns Get GetReasons description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 * MozuClient<com.mozu.api.contracts.commerceruntime.returns.ReasonCollection> mozuClient=GetReasonsClient();
-	 * client.setBaseAddress(url);
-	 * client.executeRequest();
-	 * ReasonCollection reasonCollection = client.Result();
-	 * </code></pre></p>
-	 * @return Mozu.Api.MozuClient <com.mozu.api.contracts.commerceruntime.returns.ReasonCollection>
-	 * @see com.mozu.api.contracts.commerceruntime.returns.ReasonCollection
-	 */
-	public static MozuClient<com.mozu.api.contracts.commerceruntime.returns.ReasonCollection> getReasonsClient() throws Exception
-	{
-		return getReasonsClient( null);
-	}
-
-	/**
-	 * commerce-returns Get GetReasons description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 * MozuClient<com.mozu.api.contracts.commerceruntime.returns.ReasonCollection> mozuClient=GetReasonsClient( responseFields);
-	 * client.setBaseAddress(url);
-	 * client.executeRequest();
-	 * ReasonCollection reasonCollection = client.Result();
-	 * </code></pre></p>
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
-	 * @return Mozu.Api.MozuClient <com.mozu.api.contracts.commerceruntime.returns.ReasonCollection>
-	 * @see com.mozu.api.contracts.commerceruntime.returns.ReasonCollection
-	 */
-	public static MozuClient<com.mozu.api.contracts.commerceruntime.returns.ReasonCollection> getReasonsClient(String responseFields) throws Exception
-	{
-		MozuUrl url = com.mozu.api.urls.commerce.ReturnUrl.getReasonsUrl(responseFields);
-		String verb = "GET";
-		Class<?> clz = com.mozu.api.contracts.commerceruntime.returns.ReasonCollection.class;
-		MozuClient<com.mozu.api.contracts.commerceruntime.returns.ReasonCollection> mozuClient = (MozuClient<com.mozu.api.contracts.commerceruntime.returns.ReasonCollection>) MozuClientFactory.getInstance(clz);
-		mozuClient.setVerb(verb);
-		mozuClient.setResourceUrl(url);
-		return mozuClient;
-
-	}
-
-	/**
 	 * Creates a return for previously fulfilled items. Each return must either be associated with an original order or a product definition to represent each returned item.
 	 * <p><pre><code>
 	 * MozuClient<com.mozu.api.contracts.commerceruntime.returns.Return> mozuClient=CreateReturnClient( ret);
@@ -649,13 +609,13 @@ public class ReturnClient {
 	}
 
 	/**
-	 * commerce-returns Put ResendReturnEmail description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 * MozuClient mozuClient=ResendReturnEmailClient( action);
 	 * client.setBaseAddress(url);
 	 * client.executeRequest();
 	 * </code></pre></p>
-	 * @param action Properties of an action a user can perform for a return.
+	 * @param action 
 	 * @return Mozu.Api.MozuClient 
 	 * @see com.mozu.api.contracts.commerceruntime.returns.ReturnAction
 	 */

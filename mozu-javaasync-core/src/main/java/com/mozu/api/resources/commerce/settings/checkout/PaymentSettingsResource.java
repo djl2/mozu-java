@@ -36,77 +36,6 @@ public class PaymentSettingsResource {
 
 	
 	/**
-	 * checkout-paymentsettings Get GetThirdPartyPaymentWorkflowWithValues description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 *	PaymentSettings paymentsettings = new PaymentSettings();
-	 *	ExternalPaymentWorkflowDefinition externalPaymentWorkflowDefinition = paymentsettings.getThirdPartyPaymentWorkflowWithValues( fullyQualifiedName);
-	 * </code></pre></p>
-	 * @param fullyQualifiedName 
-	 * @return com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition
-	 * @see com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition
-	 */
-	public com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition getThirdPartyPaymentWorkflowWithValues(String fullyQualifiedName) throws Exception
-	{
-		return getThirdPartyPaymentWorkflowWithValues( fullyQualifiedName,  null);
-	}
-
-	/**
-	 * checkout-paymentsettings Get GetThirdPartyPaymentWorkflowWithValues description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 *	PaymentSettings paymentsettings = new PaymentSettings();
-	 *	CountDownLatch latch = paymentsettings.getThirdPartyPaymentWorkflowWithValues( fullyQualifiedName, callback );
-	 *	latch.await()	 * </code></pre></p>
-	 * @param fullyQualifiedName 
-	 * @param  callback callback handler for asynchronous operations
-	 * @return com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition
-	 * @see com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition
-	 */
-	public CountDownLatch getThirdPartyPaymentWorkflowWithValuesAsync(String fullyQualifiedName, AsyncCallback<com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition> callback) throws Exception
-	{
-		return getThirdPartyPaymentWorkflowWithValuesAsync( fullyQualifiedName,  null, callback);
-	}
-
-	/**
-	 * checkout-paymentsettings Get GetThirdPartyPaymentWorkflowWithValues description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 *	PaymentSettings paymentsettings = new PaymentSettings();
-	 *	ExternalPaymentWorkflowDefinition externalPaymentWorkflowDefinition = paymentsettings.getThirdPartyPaymentWorkflowWithValues( fullyQualifiedName,  responseFields);
-	 * </code></pre></p>
-	 * @param fullyQualifiedName 
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
-	 * @return com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition
-	 * @see com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition
-	 */
-	public com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition getThirdPartyPaymentWorkflowWithValues(String fullyQualifiedName, String responseFields) throws Exception
-	{
-		MozuClient<com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition> client = com.mozu.api.clients.commerce.settings.checkout.PaymentSettingsClient.getThirdPartyPaymentWorkflowWithValuesClient( fullyQualifiedName,  responseFields);
-		client.setContext(_apiContext);
-		client.executeRequest();
-		return client.getResult();
-
-	}
-
-	/**
-	 * checkout-paymentsettings Get GetThirdPartyPaymentWorkflowWithValues description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 *	PaymentSettings paymentsettings = new PaymentSettings();
-	 *	CountDownLatch latch = paymentsettings.getThirdPartyPaymentWorkflowWithValues( fullyQualifiedName,  responseFields, callback );
-	 *	latch.await()	 * </code></pre></p>
-	 * @param fullyQualifiedName 
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
-	 * @param  callback callback handler for asynchronous operations
-	 * @return com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition
-	 * @see com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition
-	 */
-	public CountDownLatch getThirdPartyPaymentWorkflowWithValuesAsync(String fullyQualifiedName, String responseFields, AsyncCallback<com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition> callback) throws Exception
-	{
-		MozuClient<com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition> client = com.mozu.api.clients.commerce.settings.checkout.PaymentSettingsClient.getThirdPartyPaymentWorkflowWithValuesClient( fullyQualifiedName,  responseFields);
-		client.setContext(_apiContext);
-		return client.executeRequest(callback);
-
-	}
-
-	/**
 	 * Retrieves the details of the third-party payment service workflows configured for the site.
 	 * <p><pre><code>
 	 *	PaymentSettings paymentsettings = new PaymentSettings();
@@ -139,43 +68,6 @@ public class PaymentSettingsResource {
 		MozuClient<List<com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition>> client = com.mozu.api.clients.commerce.settings.checkout.PaymentSettingsClient.getThirdPartyPaymentWorkflowsClient();
 		client.setContext(_apiContext);
 		return client.executeRequest(callback);
-
-	}
-
-	/**
-	 * checkout-paymentsettings Put AddThirdPartyPaymentWorkflow description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 *	PaymentSettings paymentsettings = new PaymentSettings();
-	 *	paymentsettings.addThirdPartyPaymentWorkflow( definition);
-	 * </code></pre></p>
-	 * @param definition Properties of an external payment processing workflow defined for the site. At this time, only PayPal Express is supported.
-	 * @return 
-	 * @see com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition
-	 */
-	public void addThirdPartyPaymentWorkflow(com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition definition) throws Exception
-	{
-		MozuClient client = com.mozu.api.clients.commerce.settings.checkout.PaymentSettingsClient.addThirdPartyPaymentWorkflowClient( definition);
-		client.setContext(_apiContext);
-		client.executeRequest();
-		client.cleanupHttpConnection();
-
-	}
-
-	/**
-	 * checkout-paymentsettings Delete DeleteThirdPartyPaymentWorkflow description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 *	PaymentSettings paymentsettings = new PaymentSettings();
-	 *	paymentsettings.deleteThirdPartyPaymentWorkflow( fullyQualifiedName);
-	 * </code></pre></p>
-	 * @param fullyQualifiedName 
-	 * @return 
-	 */
-	public void deleteThirdPartyPaymentWorkflow(String fullyQualifiedName) throws Exception
-	{
-		MozuClient client = com.mozu.api.clients.commerce.settings.checkout.PaymentSettingsClient.deleteThirdPartyPaymentWorkflowClient( fullyQualifiedName);
-		client.setContext(_apiContext);
-		client.executeRequest();
-		client.cleanupHttpConnection();
 
 	}
 

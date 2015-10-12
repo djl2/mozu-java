@@ -134,18 +134,6 @@ public class ReturnUrl
 	}
 
 	/**
-	 * Get Resource Url for GetReasons
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
-	 * @return   String Resource Url
-	 */
-	public static MozuUrl getReasonsUrl(String responseFields)
-	{
-		UrlFormatter formatter = new UrlFormatter("/api/commerce/returns/reasons?responseFields={responseFields}");
-		formatter.formatUrl("responseFields", responseFields);
-		return new MozuUrl(formatter.getResourceUrl(), MozuUrl.UrlLocation.TENANT_POD) ;
-	}
-
-	/**
 	 * Get Resource Url for CreateReturn
 	 * @param responseFields Use this field to include those fields which are not included by default.
 	 * @return   String Resource Url

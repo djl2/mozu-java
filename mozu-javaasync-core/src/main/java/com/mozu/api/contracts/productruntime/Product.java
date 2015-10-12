@@ -10,10 +10,6 @@ import java.util.List;
 import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.joda.time.DateTime;
-import com.mozu.api.contracts.productruntime.Discount;
-import com.mozu.api.contracts.productruntime.BundledProduct;
-import com.mozu.api.contracts.productruntime.Category;
-import com.mozu.api.contracts.productruntime.ProductContent;
 import com.mozu.api.contracts.productruntime.ProductInventoryInfo;
 import com.mozu.api.contracts.productruntime.PackageMeasurements;
 import com.mozu.api.contracts.productruntime.ProductOption;
@@ -23,6 +19,10 @@ import com.mozu.api.contracts.productruntime.ProductPricingBehaviorInfo;
 import com.mozu.api.contracts.productruntime.ProductProperty;
 import com.mozu.api.contracts.productruntime.ProductPurchasableState;
 import com.mozu.api.contracts.productruntime.VariationSummary;
+import com.mozu.api.contracts.productruntime.Discount;
+import com.mozu.api.contracts.productruntime.BundledProduct;
+import com.mozu.api.contracts.productruntime.Category;
+import com.mozu.api.contracts.productruntime.ProductContent;
 
 /**
  *	The properties of a product, referenced and used by carts, orders, wish lists, and returns.
@@ -32,32 +32,6 @@ public class Product implements Serializable
 {
 	// Default Serial Version UID
 	private static final long serialVersionUID = 1L;
-
-	/**
-	 * Mozu.ProductRuntime.Contracts.Product catalogEndDate ApiTypeMember DOCUMENT_HERE 
-	 */
-	protected DateTime catalogEndDate;
-
-	public DateTime getCatalogEndDate() {
-		return this.catalogEndDate;
-	}
-
-	public void setCatalogEndDate(DateTime catalogEndDate) {
-		this.catalogEndDate = catalogEndDate;
-	}
-
-	/**
-	 * Mozu.ProductRuntime.Contracts.Product catalogStartDate ApiTypeMember DOCUMENT_HERE 
-	 */
-	protected DateTime catalogStartDate;
-
-	public DateTime getCatalogStartDate() {
-		return this.catalogStartDate;
-	}
-
-	public void setCatalogStartDate(DateTime catalogStartDate) {
-		this.catalogStartDate = catalogStartDate;
-	}
 
 	/**
 	 * Date and time when the entity was created, represented in UTC Date/Time.
@@ -70,32 +44,6 @@ public class Product implements Serializable
 
 	public void setCreateDate(DateTime createDate) {
 		this.createDate = createDate;
-	}
-
-	/**
-	 * Mozu.ProductRuntime.Contracts.Product dateFirstAvailableInCatalog ApiTypeMember DOCUMENT_HERE 
-	 */
-	protected DateTime dateFirstAvailableInCatalog;
-
-	public DateTime getDateFirstAvailableInCatalog() {
-		return this.dateFirstAvailableInCatalog;
-	}
-
-	public void setDateFirstAvailableInCatalog(DateTime dateFirstAvailableInCatalog) {
-		this.dateFirstAvailableInCatalog = dateFirstAvailableInCatalog;
-	}
-
-	/**
-	 * Mozu.ProductRuntime.Contracts.Product daysAvailableInCatalog ApiTypeMember DOCUMENT_HERE 
-	 */
-	protected Integer daysAvailableInCatalog;
-
-	public Integer getDaysAvailableInCatalog() {
-		return this.daysAvailableInCatalog;
-	}
-
-	public void setDaysAvailableInCatalog(Integer daysAvailableInCatalog) {
-		this.daysAvailableInCatalog = daysAvailableInCatalog;
 	}
 
 	/**
@@ -238,19 +186,6 @@ public class Product implements Serializable
 	}
 
 	/**
-	 * Mozu.ProductRuntime.Contracts.Product productTypeId ApiTypeMember DOCUMENT_HERE 
-	 */
-	protected Integer productTypeId;
-
-	public Integer getProductTypeId() {
-		return this.productTypeId;
-	}
-
-	public void setProductTypeId(Integer productTypeId) {
-		this.productTypeId = productTypeId;
-	}
-
-	/**
 	 * The usage type that applies to this product, which is Standard (a single product without configurable options), Configurable (a product that includes configurable option attributes), Bundle (a collection of products sold as a single entity), or Component (an invididual product that represents a component in a bundle).
 	 */
 	protected String productUsage;
@@ -311,52 +246,6 @@ public class Product implements Serializable
 
 	public void setVariationProductCode(String variationProductCode) {
 		this.variationProductCode = variationProductCode;
-	}
-
-	/**
-	 * List of shipping discounts that can be applied to the configured product. These discounts are calculated and updated as shoppers add content to their cart and continue checkout steps to order submission.
-	 */
-	protected List<Discount> availableShippingDiscounts;
-	public List<Discount> getAvailableShippingDiscounts() {
-		return this.availableShippingDiscounts;
-	}
-	public void setAvailableShippingDiscounts(List<Discount> availableShippingDiscounts) {
-		this.availableShippingDiscounts = availableShippingDiscounts;
-	}
-
-	/**
-	 * Properties of a collection of component products that make up a single product bundle with its own product code. Tenants can define product bundles for any product type that supports the Bundle product usage.
-	 */
-	protected List<BundledProduct> bundledProducts;
-	public List<BundledProduct> getBundledProducts() {
-		return this.bundledProducts;
-	}
-	public void setBundledProducts(List<BundledProduct> bundledProducts) {
-		this.bundledProducts = bundledProducts;
-	}
-
-	/**
-	 * The list of all categories associated with the product. These categories contain products, can have discounts associated, and define the grouping of products to display on the storefront.
-	 */
-	protected List<Category> categories;
-	public List<Category> getCategories() {
-		return this.categories;
-	}
-	public void setCategories(List<Category> categories) {
-		this.categories = categories;
-	}
-
-	/**
-	 * Complex type that contains content for a language specified by LocaleCode.
-	 */
-	protected ProductContent content;
-
-	public ProductContent getContent() {
-		return this.content;
-	}
-
-	public void setContent(ProductContent content) {
-		this.content = content;
 	}
 
 	/**
@@ -459,15 +348,58 @@ public class Product implements Serializable
 		this.purchasableState = purchasableState;
 	}
 
-	/**
-	 * A summary of all variations that exist for the product.
-	 */
 	protected List<VariationSummary> variations;
 	public List<VariationSummary> getVariations() {
 		return this.variations;
 	}
 	public void setVariations(List<VariationSummary> variations) {
 		this.variations = variations;
+	}
+
+	/**
+	 * List of shipping discounts that can be applied to the configured product. These discounts are calculated and updated as shoppers add content to their cart and continue checkout steps to order submission.
+	 */
+	protected List<Discount> availableShippingDiscounts;
+	public List<Discount> getAvailableShippingDiscounts() {
+		return this.availableShippingDiscounts;
+	}
+	public void setAvailableShippingDiscounts(List<Discount> availableShippingDiscounts) {
+		this.availableShippingDiscounts = availableShippingDiscounts;
+	}
+
+	/**
+	 * Properties of a collection of component products that make up a single product bundle with its own product code. Tenants can define product bundles for any product type that supports the Bundle product usage.
+	 */
+	protected List<BundledProduct> bundledProducts;
+	public List<BundledProduct> getBundledProducts() {
+		return this.bundledProducts;
+	}
+	public void setBundledProducts(List<BundledProduct> bundledProducts) {
+		this.bundledProducts = bundledProducts;
+	}
+
+	/**
+	 * The list of all categories associated with the product. These categories contain products, can have discounts associated, and define the grouping of products to display on the storefront.
+	 */
+	protected List<Category> categories;
+	public List<Category> getCategories() {
+		return this.categories;
+	}
+	public void setCategories(List<Category> categories) {
+		this.categories = categories;
+	}
+
+	/**
+	 * Complex type that contains content for a language specified by LocaleCode.
+	 */
+	protected ProductContent content;
+
+	public ProductContent getContent() {
+		return this.content;
+	}
+
+	public void setContent(ProductContent content) {
+		this.content = content;
 	}
 
 }

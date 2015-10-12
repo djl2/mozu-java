@@ -660,12 +660,12 @@ public class CustomerAccountResource {
 	}
 
 	/**
-	 * Changes a collection of shopper passwords
+	 * 
 	 * <p><pre><code>
 	 *	CustomerAccount customeraccount = new CustomerAccount();
 	 *	ChangePasswordResultCollection changePasswordResultCollection = customeraccount.changePasswords( accountPasswordInfos);
 	 * </code></pre></p>
-	 * @param accountPasswordInfos Mozu.Customer.Contracts.AccountPasswordInfoCollection ApiType DOCUMENT_HERE 
+	 * @param accountPasswordInfos 
 	 * @return com.mozu.api.contracts.customer.ChangePasswordResultCollection
 	 * @see com.mozu.api.contracts.customer.ChangePasswordResultCollection
 	 * @see com.mozu.api.contracts.customer.AccountPasswordInfoCollection
@@ -676,13 +676,13 @@ public class CustomerAccountResource {
 	}
 
 	/**
-	 * Changes a collection of shopper passwords
+	 * 
 	 * <p><pre><code>
 	 *	CustomerAccount customeraccount = new CustomerAccount();
 	 *	CountDownLatch latch = customeraccount.changePasswords( accountPasswordInfos, callback );
 	 *	latch.await()	 * </code></pre></p>
 	 * @param  callback callback handler for asynchronous operations
-	 * @param accountPasswordInfos Mozu.Customer.Contracts.AccountPasswordInfoCollection ApiType DOCUMENT_HERE 
+	 * @param accountPasswordInfos 
 	 * @return com.mozu.api.contracts.customer.ChangePasswordResultCollection
 	 * @see com.mozu.api.contracts.customer.ChangePasswordResultCollection
 	 * @see com.mozu.api.contracts.customer.AccountPasswordInfoCollection
@@ -693,13 +693,13 @@ public class CustomerAccountResource {
 	}
 
 	/**
-	 * Changes a collection of shopper passwords
+	 * 
 	 * <p><pre><code>
 	 *	CustomerAccount customeraccount = new CustomerAccount();
 	 *	ChangePasswordResultCollection changePasswordResultCollection = customeraccount.changePasswords( accountPasswordInfos,  responseFields);
 	 * </code></pre></p>
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
-	 * @param accountPasswordInfos Mozu.Customer.Contracts.AccountPasswordInfoCollection ApiType DOCUMENT_HERE 
+	 * @param responseFields 
+	 * @param accountPasswordInfos 
 	 * @return com.mozu.api.contracts.customer.ChangePasswordResultCollection
 	 * @see com.mozu.api.contracts.customer.ChangePasswordResultCollection
 	 * @see com.mozu.api.contracts.customer.AccountPasswordInfoCollection
@@ -714,14 +714,14 @@ public class CustomerAccountResource {
 	}
 
 	/**
-	 * Changes a collection of shopper passwords
+	 * 
 	 * <p><pre><code>
 	 *	CustomerAccount customeraccount = new CustomerAccount();
 	 *	CountDownLatch latch = customeraccount.changePasswords( accountPasswordInfos,  responseFields, callback );
 	 *	latch.await()	 * </code></pre></p>
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
+	 * @param responseFields 
 	 * @param  callback callback handler for asynchronous operations
-	 * @param accountPasswordInfos Mozu.Customer.Contracts.AccountPasswordInfoCollection ApiType DOCUMENT_HERE 
+	 * @param accountPasswordInfos 
 	 * @return com.mozu.api.contracts.customer.ChangePasswordResultCollection
 	 * @see com.mozu.api.contracts.customer.ChangePasswordResultCollection
 	 * @see com.mozu.api.contracts.customer.AccountPasswordInfoCollection

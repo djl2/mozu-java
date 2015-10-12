@@ -24,22 +24,6 @@ public class DiscountTarget implements Serializable
 	// Default Serial Version UID
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * Applies to Included categories Defaults to Any
-	 */
-	protected String excludedCategoriesOperator;
-
-	public String getExcludedCategoriesOperator() {
-		return this.excludedCategoriesOperator;
-	}
-
-	public void setExcludedCategoriesOperator(String excludedCategoriesOperator) {
-		this.excludedCategoriesOperator = excludedCategoriesOperator;
-	}
-
-	/**
-	 * Prevents order scoped discounts from layering over items that already have a product discount with the same type.
-	 */
 	protected Boolean excludeItemsWithExistingProductDiscounts;
 
 	public Boolean getExcludeItemsWithExistingProductDiscounts() {
@@ -50,9 +34,6 @@ public class DiscountTarget implements Serializable
 		this.excludeItemsWithExistingProductDiscounts = excludeItemsWithExistingProductDiscounts;
 	}
 
-	/**
-	 * Prevents order scoped discounts from layering over items that already have a shipping discount with the same type.
-	 */
 	protected Boolean excludeItemsWithExistingShippingDiscounts;
 
 	public Boolean getExcludeItemsWithExistingShippingDiscounts() {
@@ -74,19 +55,6 @@ public class DiscountTarget implements Serializable
 
 	public void setIncludeAllProducts(Boolean includeAllProducts) {
 		this.includeAllProducts = includeAllProducts;
-	}
-
-	/**
-	 * Applies to Included categories Defaults to Any
-	 */
-	protected String includedCategoriesOperator;
-
-	public String getIncludedCategoriesOperator() {
-		return this.includedCategoriesOperator;
-	}
-
-	public void setIncludedCategoriesOperator(String includedCategoriesOperator) {
-		this.includedCategoriesOperator = includedCategoriesOperator;
 	}
 
 	/**
@@ -171,7 +139,7 @@ public class DiscountTarget implements Serializable
 	}
 
 	/**
-	 * The list of shipping zones that are applicable for this discount.
+	 * Shipping Zones that are applicable for this discount
 	 */
 	protected List<TargetedShippingZone> shippingZones;
 	public List<TargetedShippingZone> getShippingZones() {

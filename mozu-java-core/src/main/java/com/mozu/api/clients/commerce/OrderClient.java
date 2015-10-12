@@ -293,55 +293,6 @@ public class OrderClient {
 	}
 
 	/**
-	 * commerce-orders Put ProcessDigitalWallet description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 * MozuClient<com.mozu.api.contracts.commerceruntime.orders.Order> mozuClient=ProcessDigitalWalletClient( digitalWallet,  orderId,  digitalWalletType);
-	 * client.setBaseAddress(url);
-	 * client.executeRequest();
-	 * Order order = client.Result();
-	 * </code></pre></p>
-	 * @param digitalWalletType 
-	 * @param orderId Unique identifier of the order.
-	 * @param digitalWallet Mozu.CommerceRuntime.Contracts.Orders.DigitalWallet ApiType DOCUMENT_HERE 
-	 * @return Mozu.Api.MozuClient <com.mozu.api.contracts.commerceruntime.orders.Order>
-	 * @see com.mozu.api.contracts.commerceruntime.orders.Order
-	 * @see com.mozu.api.contracts.commerceruntime.orders.DigitalWallet
-	 */
-	public static MozuClient<com.mozu.api.contracts.commerceruntime.orders.Order> processDigitalWalletClient(com.mozu.api.contracts.commerceruntime.orders.DigitalWallet digitalWallet, String orderId, String digitalWalletType) throws Exception
-	{
-		return processDigitalWalletClient( digitalWallet,  orderId,  digitalWalletType,  null);
-	}
-
-	/**
-	 * commerce-orders Put ProcessDigitalWallet description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 * MozuClient<com.mozu.api.contracts.commerceruntime.orders.Order> mozuClient=ProcessDigitalWalletClient( digitalWallet,  orderId,  digitalWalletType,  responseFields);
-	 * client.setBaseAddress(url);
-	 * client.executeRequest();
-	 * Order order = client.Result();
-	 * </code></pre></p>
-	 * @param digitalWalletType 
-	 * @param orderId Unique identifier of the order.
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
-	 * @param digitalWallet Mozu.CommerceRuntime.Contracts.Orders.DigitalWallet ApiType DOCUMENT_HERE 
-	 * @return Mozu.Api.MozuClient <com.mozu.api.contracts.commerceruntime.orders.Order>
-	 * @see com.mozu.api.contracts.commerceruntime.orders.Order
-	 * @see com.mozu.api.contracts.commerceruntime.orders.DigitalWallet
-	 */
-	public static MozuClient<com.mozu.api.contracts.commerceruntime.orders.Order> processDigitalWalletClient(com.mozu.api.contracts.commerceruntime.orders.DigitalWallet digitalWallet, String orderId, String digitalWalletType, String responseFields) throws Exception
-	{
-		MozuUrl url = com.mozu.api.urls.commerce.OrderUrl.processDigitalWalletUrl(digitalWalletType, orderId, responseFields);
-		String verb = "PUT";
-		Class<?> clz = com.mozu.api.contracts.commerceruntime.orders.Order.class;
-		MozuClient<com.mozu.api.contracts.commerceruntime.orders.Order> mozuClient = (MozuClient<com.mozu.api.contracts.commerceruntime.orders.Order>) MozuClientFactory.getInstance(clz);
-		mozuClient.setVerb(verb);
-		mozuClient.setResourceUrl(url);
-		mozuClient.setBody(digitalWallet);
-		return mozuClient;
-
-	}
-
-	/**
 	 * Update the properties of a discount applied to an order.
 	 * <p><pre><code>
 	 * MozuClient<com.mozu.api.contracts.commerceruntime.orders.Order> mozuClient=UpdateOrderDiscountClient( discount,  orderId,  discountId);
@@ -430,14 +381,14 @@ public class OrderClient {
 	}
 
 	/**
-	 * commerce-orders Put ResendOrderConfirmationEmail description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 * MozuClient mozuClient=ResendOrderConfirmationEmailClient( action,  orderId);
 	 * client.setBaseAddress(url);
 	 * client.executeRequest();
 	 * </code></pre></p>
-	 * @param orderId Unique identifier of the order.
-	 * @param action The action to perform for the order.
+	 * @param orderId 
+	 * @param action 
 	 * @return Mozu.Api.MozuClient 
 	 * @see com.mozu.api.contracts.commerceruntime.orders.OrderAction
 	 */

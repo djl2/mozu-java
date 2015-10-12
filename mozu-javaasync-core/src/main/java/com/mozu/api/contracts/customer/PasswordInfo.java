@@ -19,9 +19,6 @@ public class PasswordInfo implements Serializable
 	// Default Serial Version UID
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * The External Password, typically used for imports in conjunction with a custom action
-	 */
 	protected String externalPassword;
 
 	public String getExternalPassword() {

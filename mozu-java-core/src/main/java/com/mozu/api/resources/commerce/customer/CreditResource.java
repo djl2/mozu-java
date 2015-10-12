@@ -178,12 +178,12 @@ public class CreditResource {
 	}
 
 	/**
-	 * customer-credits Put ResendCreditCreatedEmail description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Credit credit = new Credit();
 	 *	credit.resendCreditCreatedEmail( code);
 	 * </code></pre></p>
-	 * @param code User-defined code that uniqely identifies the channel group.
+	 * @param code 
 	 * @return 
 	 */
 	public void resendCreditCreatedEmail(String code) throws Exception

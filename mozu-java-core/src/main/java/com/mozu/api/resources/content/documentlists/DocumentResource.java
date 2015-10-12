@@ -62,49 +62,6 @@ public class DocumentResource {
 	}
 
 	/**
-	 * documentlists-documents Get TransformDocumentContent description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 *	Document document = new Document();
-	 *	Stream stream = document.transformDocumentContent( documentListName,  documentId);
-	 * </code></pre></p>
-	 * @param documentId Unique identifier for a document, used by content and document calls. Document IDs are associated with document types, document type lists, sites, and tenants.
-	 * @param documentListName Name of content documentListName to delete
-	 * @return Stream
-	 * @see Stream
-	 */
-	public java.io.InputStream transformDocumentContent(String documentListName, String documentId) throws Exception
-	{
-		return transformDocumentContent( documentListName,  documentId,  null,  null,  null,  null,  null,  null,  null);
-	}
-
-	/**
-	 * documentlists-documents Get TransformDocumentContent description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 *	Document document = new Document();
-	 *	Stream stream = document.transformDocumentContent( documentListName,  documentId,  width,  height,  max,  maxWidth,  maxHeight,  crop,  quality);
-	 * </code></pre></p>
-	 * @param crop 
-	 * @param documentId Unique identifier for a document, used by content and document calls. Document IDs are associated with document types, document type lists, sites, and tenants.
-	 * @param documentListName Name of content documentListName to delete
-	 * @param height 
-	 * @param max 
-	 * @param maxHeight 
-	 * @param maxWidth 
-	 * @param quality 
-	 * @param width 
-	 * @return Stream
-	 * @see Stream
-	 */
-	public java.io.InputStream transformDocumentContent(String documentListName, String documentId, Integer width, Integer height, Integer max, Integer maxWidth, Integer maxHeight, String crop, Integer quality) throws Exception
-	{
-		MozuClient<java.io.InputStream> client = com.mozu.api.clients.content.documentlists.DocumentClient.transformDocumentContentClient( documentListName,  documentId,  width,  height,  max,  maxWidth,  maxHeight,  crop,  quality);
-		client.setContext(_apiContext);
-		client.executeRequest();
-		return client.getResult();
-
-	}
-
-	/**
 	 * Retrieves a document within the specified document list.
 	 * <p><pre><code>
 	 *	Document document = new Document();
@@ -117,25 +74,24 @@ public class DocumentResource {
 	 */
 	public com.mozu.api.contracts.content.Document getDocument(String documentListName, String documentId) throws Exception
 	{
-		return getDocument( documentListName,  documentId,  null,  null);
+		return getDocument( documentListName,  documentId,  null);
 	}
 
 	/**
 	 * Retrieves a document within the specified document list.
 	 * <p><pre><code>
 	 *	Document document = new Document();
-	 *	Document document = document.getDocument( documentListName,  documentId,  includeInactive,  responseFields);
+	 *	Document document = document.getDocument( documentListName,  documentId,  responseFields);
 	 * </code></pre></p>
 	 * @param documentId Unique identifier for a document, used by content and document calls. Document IDs are associated with document types, document type lists, sites, and tenants.
 	 * @param documentListName Name of content documentListName to delete
-	 * @param includeInactive 
 	 * @param responseFields Use this field to include those fields which are not included by default.
 	 * @return com.mozu.api.contracts.content.Document
 	 * @see com.mozu.api.contracts.content.Document
 	 */
-	public com.mozu.api.contracts.content.Document getDocument(String documentListName, String documentId, Boolean includeInactive, String responseFields) throws Exception
+	public com.mozu.api.contracts.content.Document getDocument(String documentListName, String documentId, String responseFields) throws Exception
 	{
-		MozuClient<com.mozu.api.contracts.content.Document> client = com.mozu.api.clients.content.documentlists.DocumentClient.getDocumentClient(_dataViewMode,  documentListName,  documentId,  includeInactive,  responseFields);
+		MozuClient<com.mozu.api.contracts.content.Document> client = com.mozu.api.clients.content.documentlists.DocumentClient.getDocumentClient(_dataViewMode,  documentListName,  documentId,  responseFields);
 		client.setContext(_apiContext);
 		client.executeRequest();
 		return client.getResult();
@@ -154,18 +110,17 @@ public class DocumentResource {
 	 */
 	public com.mozu.api.contracts.content.DocumentCollection getDocuments(String documentListName) throws Exception
 	{
-		return getDocuments( documentListName,  null,  null,  null,  null,  null,  null);
+		return getDocuments( documentListName,  null,  null,  null,  null,  null);
 	}
 
 	/**
 	 * Retrieves a collection of documents according to any filter and sort criteria.
 	 * <p><pre><code>
 	 *	Document document = new Document();
-	 *	DocumentCollection documentCollection = document.getDocuments( documentListName,  filter,  sortBy,  pageSize,  startIndex,  includeInactive,  responseFields);
+	 *	DocumentCollection documentCollection = document.getDocuments( documentListName,  filter,  sortBy,  pageSize,  startIndex,  responseFields);
 	 * </code></pre></p>
 	 * @param documentListName Name of content documentListName to delete
 	 * @param filter A set of filter expressions representing the search parameters for a query: eq=equals, ne=not equals, gt=greater than, lt = less than or equals, gt = greater than or equals, lt = less than or equals, sw = starts with, or cont = contains. Optional.
-	 * @param includeInactive 
 	 * @param pageSize The number of results to display on each page when creating paged results from a query. The maximum value is 200.
 	 * @param responseFields Use this field to include those fields which are not included by default.
 	 * @param sortBy The property by which to sort results and whether the results appear in ascending (a-z) order, represented by ASC or in descending (z-a) order, represented by DESC. The sortBy parameter follows an available property. For example: "sortBy=productCode+asc"
@@ -173,9 +128,9 @@ public class DocumentResource {
 	 * @return com.mozu.api.contracts.content.DocumentCollection
 	 * @see com.mozu.api.contracts.content.DocumentCollection
 	 */
-	public com.mozu.api.contracts.content.DocumentCollection getDocuments(String documentListName, String filter, String sortBy, Integer pageSize, Integer startIndex, Boolean includeInactive, String responseFields) throws Exception
+	public com.mozu.api.contracts.content.DocumentCollection getDocuments(String documentListName, String filter, String sortBy, Integer pageSize, Integer startIndex, String responseFields) throws Exception
 	{
-		MozuClient<com.mozu.api.contracts.content.DocumentCollection> client = com.mozu.api.clients.content.documentlists.DocumentClient.getDocumentsClient(_dataViewMode,  documentListName,  filter,  sortBy,  pageSize,  startIndex,  includeInactive,  responseFields);
+		MozuClient<com.mozu.api.contracts.content.DocumentCollection> client = com.mozu.api.clients.content.documentlists.DocumentClient.getDocumentsClient(_dataViewMode,  documentListName,  filter,  sortBy,  pageSize,  startIndex,  responseFields);
 		client.setContext(_apiContext);
 		client.executeRequest();
 		return client.getResult();

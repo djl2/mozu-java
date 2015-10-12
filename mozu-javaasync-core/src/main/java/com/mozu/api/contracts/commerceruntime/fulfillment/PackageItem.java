@@ -20,6 +20,29 @@ public class PackageItem implements Serializable
 	private static final long serialVersionUID = 1L;
 
 	/**
+	 * This specifies the fulfillment type of digital package item.
+	 */
+	protected String fulfillmentItemType;
+
+	public String getFulfillmentItemType() {
+		return this.fulfillmentItemType;
+	}
+
+	public void setFulfillmentItemType(String fulfillmentItemType) {
+		this.fulfillmentItemType = fulfillmentItemType;
+	}
+
+	protected Integer lineId;
+
+	public Integer getLineId() {
+		return this.lineId;
+	}
+
+	public void setLineId(Integer lineId) {
+		this.lineId = lineId;
+	}
+
+	/**
 	 * Merchant-created code that uniquely identifies the product such as a SKU or item number. Once created, the product code is read-only.
 	 */
 	protected String productCode;
@@ -43,45 +66,6 @@ public class PackageItem implements Serializable
 
 	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
-	}
-
-	/**
-	 * This specifies the fulfillment type of digital package item.
-	 */
-	protected String fulfillmentItemType;
-
-	public String getFulfillmentItemType() {
-		return this.fulfillmentItemType;
-	}
-
-	public void setFulfillmentItemType(String fulfillmentItemType) {
-		this.fulfillmentItemType = fulfillmentItemType;
-	}
-
-	/**
-	 * The line id associated with the fulfillment.
-	 */
-	protected Integer lineId;
-
-	public Integer getLineId() {
-		return this.lineId;
-	}
-
-	public void setLineId(Integer lineId) {
-		this.lineId = lineId;
-	}
-
-	/**
-	 * Fully qualified name of the selected option's attribute. Bundledproducts result from a static bundle or are dynamically added as a result of the shopper selecting products as extras. When the bundled item is dynamic, it includes the attribute's fully qualified name of the extra that it came from. When `optionAttributeFQN `is null, the bundled item was statically defined. When not null, the item came from an extra selection.
-	 */
-	protected String optionAttributeFQN;
-
-	public String getOptionAttributeFQN() {
-		return this.optionAttributeFQN;
-	}
-
-	public void setOptionAttributeFQN(String optionAttributeFQN) {
-		this.optionAttributeFQN = optionAttributeFQN;
 	}
 
 }

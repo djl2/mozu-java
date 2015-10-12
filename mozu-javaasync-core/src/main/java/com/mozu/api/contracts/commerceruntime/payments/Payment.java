@@ -75,16 +75,29 @@ public class Payment implements Serializable
 	}
 
 	/**
-	 * The external/third party transaction Id for this payment. This is used to store the transaction Id from digital wallet like Visa Checkout
+	 * Unique identifier of the source product property. For a product field it will be the name of the field. For a product attribute it will be the Attribute FQN. 
 	 */
-	protected String externalTransactionId;
+	protected String id;
 
-	public String getExternalTransactionId() {
-		return this.externalTransactionId;
+	public String getId() {
+		return this.id;
 	}
 
-	public void setExternalTransactionId(String externalTransactionId) {
-		this.externalTransactionId = externalTransactionId;
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	/**
+	 * Indicates if the product in a cart, order, or wish list is purchased on a recurring schedule. If true, the item can be purchased or fulfilled at regular intervals, such as a monthly billing cycle. For example, digital or physical product subscriptions are recurring cart items. This property is not used at this time and is reserved for future functionality.
+	 */
+	protected Boolean isRecurring;
+
+	public Boolean getIsRecurring() {
+		return this.isRecurring;
+	}
+
+	public void setIsRecurring(Boolean isRecurring) {
+		this.isRecurring = isRecurring;
 	}
 
 	/**
@@ -127,19 +140,6 @@ public class Payment implements Serializable
 	}
 
 	/**
-	 * The source of data for this payment. By default, this will be set to 'mozu'
-	 */
-	protected String paymentWorkflow;
-
-	public String getPaymentWorkflow() {
-		return this.paymentWorkflow;
-	}
-
-	public void setPaymentWorkflow(String paymentWorkflow) {
-		this.paymentWorkflow = paymentWorkflow;
-	}
-
-	/**
 	 * The current status of an object. This status is specific to the object including payment (New, Authorized, Captured, Declined, Failed, Voided, Credited, CheckRequested, or RolledBack), discount (Active, Scheduled, or Expired), returns (ReturnAuthorized), tenant, package (Fulfilled or NotFulfilled), application, master and product catalogs, orders (Pending, Submitted, Processing, Pending Review, Closed, or Canceled), and order validation results (Pass, Fail, Error, or Review).
 	 */
 	protected String status;
@@ -150,32 +150,6 @@ public class Payment implements Serializable
 
 	public void setStatus(String status) {
 		this.status = status;
-	}
-
-	/**
-	 * Unique identifier of the source product property. For a product field it will be the name of the field. For a product attribute it will be the Attribute FQN. 
-	 */
-	protected String id;
-
-	public String getId() {
-		return this.id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	/**
-	 * Indicates if the product in a cart, order, or wish list is purchased on a recurring schedule. If true, the item can be purchased or fulfilled at regular intervals, such as a monthly billing cycle. For example, digital or physical product subscriptions are recurring cart items. This property is not used at this time and is reserved for future functionality.
-	 */
-	protected Boolean isRecurring;
-
-	public Boolean getIsRecurring() {
-		return this.isRecurring;
-	}
-
-	public void setIsRecurring(Boolean isRecurring) {
-		this.isRecurring = isRecurring;
 	}
 
 	/**
@@ -213,16 +187,6 @@ public class Payment implements Serializable
 	}
 	public void setChangeMessages(List<ChangeMessage> changeMessages) {
 		this.changeMessages = changeMessages;
-	}
-
-	protected com.fasterxml.jackson.databind.JsonNode data;
-
-	public com.fasterxml.jackson.databind.JsonNode getData() {
-		return this.data;
-	}
-
-	public void setData(com.fasterxml.jackson.databind.JsonNode data) {
-		this.data = data;
 	}
 
 	/**

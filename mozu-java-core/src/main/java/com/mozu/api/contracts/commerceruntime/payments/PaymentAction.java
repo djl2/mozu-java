@@ -87,19 +87,6 @@ public class PaymentAction implements Serializable
 	}
 
 	/**
-	 * Mozu.CommerceRuntime.Contracts.Payments.PaymentAction externalTransactionId ApiTypeMember DOCUMENT_HERE 
-	 */
-	protected String externalTransactionId;
-
-	public String getExternalTransactionId() {
-		return this.externalTransactionId;
-	}
-
-	public void setExternalTransactionId(String externalTransactionId) {
-		this.externalTransactionId = externalTransactionId;
-	}
-
-	/**
 	 * Date and time of a payment interaction, including handling and processing a payment and validating and completing a payment with a payment gateway.
 	 */
 	protected DateTime interactionDate;
@@ -136,16 +123,6 @@ public class PaymentAction implements Serializable
 
 	public void setReturnUrl(String returnUrl) {
 		this.returnUrl = returnUrl;
-	}
-
-	protected com.fasterxml.jackson.databind.JsonNode data;
-
-	public com.fasterxml.jackson.databind.JsonNode getData() {
-		return this.data;
-	}
-
-	public void setData(com.fasterxml.jackson.databind.JsonNode data) {
-		this.data = data;
 	}
 
 	/**

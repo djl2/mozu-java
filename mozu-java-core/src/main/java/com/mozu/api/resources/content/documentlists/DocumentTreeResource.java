@@ -62,49 +62,6 @@ public class DocumentTreeResource {
 	}
 
 	/**
-	 * documentlists-documentTree Get TransformTreeDocumentContent description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 *	DocumentTree documenttree = new DocumentTree();
-	 *	Stream stream = documenttree.transformTreeDocumentContent( documentListName,  documentName);
-	 * </code></pre></p>
-	 * @param documentListName Name of content documentListName to delete
-	 * @param documentName The name of the document in the site.
-	 * @return Stream
-	 * @see Stream
-	 */
-	public java.io.InputStream transformTreeDocumentContent(String documentListName, String documentName) throws Exception
-	{
-		return transformTreeDocumentContent( documentListName,  documentName,  null,  null,  null,  null,  null,  null,  null);
-	}
-
-	/**
-	 * documentlists-documentTree Get TransformTreeDocumentContent description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 *	DocumentTree documenttree = new DocumentTree();
-	 *	Stream stream = documenttree.transformTreeDocumentContent( documentListName,  documentName,  width,  height,  max,  maxWidth,  maxHeight,  crop,  quality);
-	 * </code></pre></p>
-	 * @param crop 
-	 * @param documentListName Name of content documentListName to delete
-	 * @param documentName The name of the document in the site.
-	 * @param height 
-	 * @param max 
-	 * @param maxHeight 
-	 * @param maxWidth 
-	 * @param quality 
-	 * @param width 
-	 * @return Stream
-	 * @see Stream
-	 */
-	public java.io.InputStream transformTreeDocumentContent(String documentListName, String documentName, Integer width, Integer height, Integer max, Integer maxWidth, Integer maxHeight, String crop, Integer quality) throws Exception
-	{
-		MozuClient<java.io.InputStream> client = com.mozu.api.clients.content.documentlists.DocumentTreeClient.transformTreeDocumentContentClient( documentListName,  documentName,  width,  height,  max,  maxWidth,  maxHeight,  crop,  quality);
-		client.setContext(_apiContext);
-		client.executeRequest();
-		return client.getResult();
-
-	}
-
-	/**
 	 * Retrieves a document based on its document list and folder path in the document hierarchy.
 	 * <p><pre><code>
 	 *	DocumentTree documenttree = new DocumentTree();
@@ -117,25 +74,24 @@ public class DocumentTreeResource {
 	 */
 	public com.mozu.api.contracts.content.Document getTreeDocument(String documentListName, String documentName) throws Exception
 	{
-		return getTreeDocument( documentListName,  documentName,  null,  null);
+		return getTreeDocument( documentListName,  documentName,  null);
 	}
 
 	/**
 	 * Retrieves a document based on its document list and folder path in the document hierarchy.
 	 * <p><pre><code>
 	 *	DocumentTree documenttree = new DocumentTree();
-	 *	Document document = documenttree.getTreeDocument( documentListName,  documentName,  includeInactive,  responseFields);
+	 *	Document document = documenttree.getTreeDocument( documentListName,  documentName,  responseFields);
 	 * </code></pre></p>
 	 * @param documentListName Name of content documentListName to delete
 	 * @param documentName The name of the document in the site.
-	 * @param includeInactive 
 	 * @param responseFields Use this field to include those fields which are not included by default.
 	 * @return com.mozu.api.contracts.content.Document
 	 * @see com.mozu.api.contracts.content.Document
 	 */
-	public com.mozu.api.contracts.content.Document getTreeDocument(String documentListName, String documentName, Boolean includeInactive, String responseFields) throws Exception
+	public com.mozu.api.contracts.content.Document getTreeDocument(String documentListName, String documentName, String responseFields) throws Exception
 	{
-		MozuClient<com.mozu.api.contracts.content.Document> client = com.mozu.api.clients.content.documentlists.DocumentTreeClient.getTreeDocumentClient(_dataViewMode,  documentListName,  documentName,  includeInactive,  responseFields);
+		MozuClient<com.mozu.api.contracts.content.Document> client = com.mozu.api.clients.content.documentlists.DocumentTreeClient.getTreeDocumentClient(_dataViewMode,  documentListName,  documentName,  responseFields);
 		client.setContext(_apiContext);
 		client.executeRequest();
 		return client.getResult();

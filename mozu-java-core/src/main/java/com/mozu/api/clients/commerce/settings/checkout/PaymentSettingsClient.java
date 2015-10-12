@@ -22,48 +22,6 @@ import org.apache.commons.lang.StringUtils;
 public class PaymentSettingsClient {
 	
 	/**
-	 * checkout-paymentsettings Get GetThirdPartyPaymentWorkflowWithValues description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 * MozuClient<com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition> mozuClient=GetThirdPartyPaymentWorkflowWithValuesClient( fullyQualifiedName);
-	 * client.setBaseAddress(url);
-	 * client.executeRequest();
-	 * ExternalPaymentWorkflowDefinition externalPaymentWorkflowDefinition = client.Result();
-	 * </code></pre></p>
-	 * @param fullyQualifiedName 
-	 * @return Mozu.Api.MozuClient <com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition>
-	 * @see com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition
-	 */
-	public static MozuClient<com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition> getThirdPartyPaymentWorkflowWithValuesClient(String fullyQualifiedName) throws Exception
-	{
-		return getThirdPartyPaymentWorkflowWithValuesClient( fullyQualifiedName,  null);
-	}
-
-	/**
-	 * checkout-paymentsettings Get GetThirdPartyPaymentWorkflowWithValues description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 * MozuClient<com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition> mozuClient=GetThirdPartyPaymentWorkflowWithValuesClient( fullyQualifiedName,  responseFields);
-	 * client.setBaseAddress(url);
-	 * client.executeRequest();
-	 * ExternalPaymentWorkflowDefinition externalPaymentWorkflowDefinition = client.Result();
-	 * </code></pre></p>
-	 * @param fullyQualifiedName 
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
-	 * @return Mozu.Api.MozuClient <com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition>
-	 * @see com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition
-	 */
-	public static MozuClient<com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition> getThirdPartyPaymentWorkflowWithValuesClient(String fullyQualifiedName, String responseFields) throws Exception
-	{
-		MozuUrl url = com.mozu.api.urls.commerce.settings.checkout.PaymentSettingsUrl.getThirdPartyPaymentWorkflowWithValuesUrl(fullyQualifiedName, responseFields);
-		String verb = "GET";
-		Class<?> clz = com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition.class;
-		MozuClient<com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition> mozuClient = (MozuClient<com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition>) MozuClientFactory.getInstance(clz);
-		mozuClient.setVerb(verb);
-		mozuClient.setResourceUrl(url);
-		return mozuClient;
-
-	}
-
-	/**
 	 * Retrieves the details of the third-party payment service workflows configured for the site.
 	 * <p><pre><code>
 	 * MozuClient<List<com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition>> mozuClient=GetThirdPartyPaymentWorkflowsClient();
@@ -80,50 +38,6 @@ public class PaymentSettingsClient {
 		String verb = "GET";
 		Class<?> clz = new ArrayList<com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition>(){}.getClass();
 		MozuClient<List<com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition>> mozuClient = (MozuClient<List<com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition>>) MozuClientFactory.getInstance(clz);
-		mozuClient.setVerb(verb);
-		mozuClient.setResourceUrl(url);
-		return mozuClient;
-
-	}
-
-	/**
-	 * checkout-paymentsettings Put AddThirdPartyPaymentWorkflow description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 * MozuClient mozuClient=AddThirdPartyPaymentWorkflowClient( definition);
-	 * client.setBaseAddress(url);
-	 * client.executeRequest();
-	 * </code></pre></p>
-	 * @param definition Properties of an external payment processing workflow defined for the site. At this time, only PayPal Express is supported.
-	 * @return Mozu.Api.MozuClient 
-	 * @see com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition
-	 */
-	public static MozuClient addThirdPartyPaymentWorkflowClient(com.mozu.api.contracts.sitesettings.order.ExternalPaymentWorkflowDefinition definition) throws Exception
-	{
-		MozuUrl url = com.mozu.api.urls.commerce.settings.checkout.PaymentSettingsUrl.addThirdPartyPaymentWorkflowUrl();
-		String verb = "PUT";
-				MozuClient mozuClient = (MozuClient) MozuClientFactory.getInstance();
-		mozuClient.setVerb(verb);
-		mozuClient.setResourceUrl(url);
-		mozuClient.setBody(definition);
-		return mozuClient;
-
-	}
-
-	/**
-	 * checkout-paymentsettings Delete DeleteThirdPartyPaymentWorkflow description DOCUMENT_HERE 
-	 * <p><pre><code>
-	 * MozuClient mozuClient=DeleteThirdPartyPaymentWorkflowClient( fullyQualifiedName);
-	 * client.setBaseAddress(url);
-	 * client.executeRequest();
-	 * </code></pre></p>
-	 * @param fullyQualifiedName 
-	 * @return Mozu.Api.MozuClient 
-	 */
-	public static MozuClient deleteThirdPartyPaymentWorkflowClient(String fullyQualifiedName) throws Exception
-	{
-		MozuUrl url = com.mozu.api.urls.commerce.settings.checkout.PaymentSettingsUrl.deleteThirdPartyPaymentWorkflowUrl(fullyQualifiedName);
-		String verb = "DELETE";
-				MozuClient mozuClient = (MozuClient) MozuClientFactory.getInstance();
 		mozuClient.setVerb(verb);
 		mozuClient.setResourceUrl(url);
 		return mozuClient;

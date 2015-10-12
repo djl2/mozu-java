@@ -11,8 +11,6 @@ import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.joda.time.DateTime;
 import com.mozu.api.contracts.core.AuditInfo;
-import com.mozu.api.contracts.sitesettings.general.CacheSettings;
-import com.mozu.api.contracts.sitesettings.general.general.routing.CustomRouteSettings;
 import com.mozu.api.contracts.sitesettings.general.EmailTransactionSettings;
 import com.mozu.api.contracts.sitesettings.general.TaxableTerritory;
 import com.mozu.api.contracts.sitesettings.general.general.ViewAuthorizations;
@@ -37,19 +35,6 @@ public class GeneralSettings implements Serializable
 
 	public void setAllowInvalidAddresses(Boolean allowInvalidAddresses) {
 		this.allowInvalidAddresses = allowInvalidAddresses;
-	}
-
-	/**
-	 * Custom dns host name for cnd edge caching.
-	 */
-	protected String customCdnHostName;
-
-	public String getCustomCdnHostName() {
-		return this.customCdnHostName;
-	}
-
-	public void setCustomCdnHostName(String customCdnHostName) {
-		this.customCdnHostName = customCdnHostName;
 	}
 
 	/**
@@ -325,35 +310,6 @@ public class GeneralSettings implements Serializable
 		this.auditInfo = auditInfo;
 	}
 
-	/**
-	 * Set of settings to deal with site caching.
-	 */
-	protected CacheSettings cacheSettings;
-
-	public CacheSettings getCacheSettings() {
-		return this.cacheSettings;
-	}
-
-	public void setCacheSettings(CacheSettings cacheSettings) {
-		this.cacheSettings = cacheSettings;
-	}
-
-	/**
-	 * Site-level control over request routing for SEO purposes. Not available for update, must use its own subresource.
-	 */
-	protected CustomRouteSettings customRoutes;
-
-	public CustomRouteSettings getCustomRoutes() {
-		return this.customRoutes;
-	}
-
-	public void setCustomRoutes(CustomRouteSettings customRoutes) {
-		this.customRoutes = customRoutes;
-	}
-
-	/**
-	 * Supressed emails. Setting any of these to 'true' will block Mozu from sending that email and an event will be published instead.
-	 */
 	protected EmailTransactionSettings supressedEmailTransactions;
 
 	public EmailTransactionSettings getSupressedEmailTransactions() {
@@ -375,9 +331,6 @@ public class GeneralSettings implements Serializable
 		this.taxableTerritories = taxableTerritories;
 	}
 
-	/**
-	 * Mozu.SiteSettings.General.Contracts.GeneralSettings viewAuthorizations ApiTypeMember DOCUMENT_HERE 
-	 */
 	protected ViewAuthorizations viewAuthorizations;
 
 	public ViewAuthorizations getViewAuthorizations() {

@@ -40,6 +40,16 @@ public class Order implements Serializable
 	// Default Serial Version UID
 	private static final long serialVersionUID = 1L;
 
+	protected Double dutyAmount;
+
+	public Double getDutyAmount() {
+		return this.dutyAmount;
+	}
+
+	public void setDutyAmount(Double dutyAmount) {
+		this.dutyAmount = dutyAmount;
+	}
+
 	/**
 	 * The date and time the order was accepted by the tenant.
 	 */
@@ -79,9 +89,6 @@ public class Order implements Serializable
 		this.amountAvailableForRefund = amountAvailableForRefund;
 	}
 
-	/**
-	 * A counter for how much money has been issued in refunds. This calculated field does NOT include refunds issued in returns.
-	 */
 	protected Double amountRefunded;
 
 	public Double getAmountRefunded() {
@@ -257,22 +264,6 @@ public class Order implements Serializable
 		this.discountTotal = discountTotal;
 	}
 
-	/**
-	 * Order level duty or tariff amount. Does not take into account duties or tariffs specifically on items on the order
-	 */
-	protected Double dutyAmount;
-
-	public Double getDutyAmount() {
-		return this.dutyAmount;
-	}
-
-	public void setDutyAmount(Double dutyAmount) {
-		this.dutyAmount = dutyAmount;
-	}
-
-	/**
-	 * Duties or tariffs for the Order as well as OrderItems (e.g. if the Order has a $5 duty or tariff for any reason and an OrderItem has a $2 duty or tariff then the value in this property would be $7)
-	 */
 	protected Double dutyTotal;
 
 	public Double getDutyTotal() {
@@ -890,9 +881,6 @@ public class Order implements Serializable
 		this.changeMessages = changeMessages;
 	}
 
-	/**
-	 * Custom data for a given vendor set within the commerce process.
-	 */
 	protected com.fasterxml.jackson.databind.JsonNode data;
 
 	public com.fasterxml.jackson.databind.JsonNode getData() {
@@ -914,9 +902,6 @@ public class Order implements Serializable
 		this.digitalPackages = digitalPackages;
 	}
 
-	/**
-	 * Extra properties (key-value pairs) that extend the primary object. Think of this as a property bag of string keys and string values.
-	 */
 	protected List<ExtendedProperty> extendedProperties;
 	public List<ExtendedProperty> getExtendedProperties() {
 		return this.extendedProperties;
@@ -1026,9 +1011,6 @@ public class Order implements Serializable
 		this.pickups = pickups;
 	}
 
-	/**
-	 * Refunds associated with this order. A refund is a single exchange of money from merchant to customer that either encapsulates a refund to a credit card or an issuance of a store credit. Refunds does not reduce the 'amount collected' on an order and it is possible for refunds to exceed the total order amount.
-	 */
 	protected List<Refund> refunds;
 	public List<Refund> getRefunds() {
 		return this.refunds;

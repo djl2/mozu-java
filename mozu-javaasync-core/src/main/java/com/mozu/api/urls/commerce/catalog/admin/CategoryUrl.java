@@ -76,32 +76,8 @@ public class CategoryUrl
 	}
 
 	/**
-	 * Get Resource Url for ValidateDynamicExpression
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
-	 * @return   String Resource Url
-	 */
-	public static MozuUrl validateDynamicExpressionUrl(String responseFields)
-	{
-		UrlFormatter formatter = new UrlFormatter("/api/commerce/catalog/admin/categories/ValidateDynamicExpression?responseFields={responseFields}");
-		formatter.formatUrl("responseFields", responseFields);
-		return new MozuUrl(formatter.getResourceUrl(), MozuUrl.UrlLocation.TENANT_POD) ;
-	}
-
-	/**
-	 * Get Resource Url for ValidateRealTimeDynamicExpression
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
-	 * @return   String Resource Url
-	 */
-	public static MozuUrl validateRealTimeDynamicExpressionUrl(String responseFields)
-	{
-		UrlFormatter formatter = new UrlFormatter("/api/commerce/catalog/admin/categories/ValidateRealTimeDynamicExpression?responseFields={responseFields}");
-		formatter.formatUrl("responseFields", responseFields);
-		return new MozuUrl(formatter.getResourceUrl(), MozuUrl.UrlLocation.TENANT_POD) ;
-	}
-
-	/**
 	 * Get Resource Url for UpdateCategory
-	 * @param cascadeVisibility If true, when changing the display option for the category, change it for all subcategories also. The default value is false.
+	 * @param cascadeVisibility If true, when changing the display option for the category, change it for all subcategories also. Default: False.
 	 * @param categoryId Unique identifier of the category to modify.
 	 * @param responseFields Use this field to include those fields which are not included by default.
 	 * @return   String Resource Url

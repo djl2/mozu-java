@@ -19,7 +19,7 @@ import com.mozu.api.security.AuthTicket;
 import org.apache.commons.lang.StringUtils;
 
 /** <summary>
- * platform/developer related resources. DOCUMENT_HERE 
+ * 
  * </summary>
  */
 public class ApplicationResource {
@@ -40,7 +40,7 @@ public ApplicationResource(ApiContext apiContext)
 
 	
 	/**
-	 * platform-developer Get GetAppPackageNames description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	PackageNamesCollection packageNamesCollection = application.getAppPackageNames( applicationKey);
@@ -55,7 +55,7 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Get GetAppPackageNames description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	CountDownLatch latch = application.getAppPackageNames( applicationKey, callback );
@@ -71,13 +71,13 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Get GetAppPackageNames description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	PackageNamesCollection packageNamesCollection = application.getAppPackageNames( applicationKey,  responseFields);
 	 * </code></pre></p>
 	 * @param applicationKey 
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
+	 * @param responseFields 
 	 * @return com.mozu.api.contracts.appdev.PackageNamesCollection
 	 * @see com.mozu.api.contracts.appdev.PackageNamesCollection
 	 */
@@ -91,13 +91,13 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Get GetAppPackageNames description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	CountDownLatch latch = application.getAppPackageNames( applicationKey,  responseFields, callback );
 	 *	latch.await()	 * </code></pre></p>
 	 * @param applicationKey 
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
+	 * @param responseFields 
 	 * @param  callback callback handler for asynchronous operations
 	 * @return com.mozu.api.contracts.appdev.PackageNamesCollection
 	 * @see com.mozu.api.contracts.appdev.PackageNamesCollection
@@ -111,7 +111,7 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Get GetAppVersions description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	ApplicationVersionsCollection applicationVersionsCollection = application.getAppVersions( nsAndAppId);
@@ -126,7 +126,7 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Get GetAppVersions description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	CountDownLatch latch = application.getAppVersions( nsAndAppId, callback );
@@ -142,13 +142,13 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Get GetAppVersions description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	ApplicationVersionsCollection applicationVersionsCollection = application.getAppVersions( nsAndAppId,  responseFields);
 	 * </code></pre></p>
 	 * @param nsAndAppId 
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
+	 * @param responseFields 
 	 * @return com.mozu.api.contracts.appdev.ApplicationVersionsCollection
 	 * @see com.mozu.api.contracts.appdev.ApplicationVersionsCollection
 	 */
@@ -162,13 +162,13 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Get GetAppVersions description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	CountDownLatch latch = application.getAppVersions( nsAndAppId,  responseFields, callback );
 	 *	latch.await()	 * </code></pre></p>
 	 * @param nsAndAppId 
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
+	 * @param responseFields 
 	 * @param  callback callback handler for asynchronous operations
 	 * @return com.mozu.api.contracts.appdev.ApplicationVersionsCollection
 	 * @see com.mozu.api.contracts.appdev.ApplicationVersionsCollection
@@ -182,7 +182,7 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Get GetPackageFileMetadata description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	FileMetadata fileMetadata = application.getPackageFileMetadata( applicationKey,  filepath);
@@ -198,7 +198,7 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Get GetPackageFileMetadata description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	CountDownLatch latch = application.getPackageFileMetadata( applicationKey,  filepath, callback );
@@ -215,14 +215,14 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Get GetPackageFileMetadata description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	FileMetadata fileMetadata = application.getPackageFileMetadata( applicationKey,  filepath,  responseFields);
 	 * </code></pre></p>
 	 * @param applicationKey 
 	 * @param filepath 
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
+	 * @param responseFields 
 	 * @return com.mozu.api.contracts.appdev.FileMetadata
 	 * @see com.mozu.api.contracts.appdev.FileMetadata
 	 */
@@ -236,14 +236,14 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Get GetPackageFileMetadata description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	CountDownLatch latch = application.getPackageFileMetadata( applicationKey,  filepath,  responseFields, callback );
 	 *	latch.await()	 * </code></pre></p>
 	 * @param applicationKey 
 	 * @param filepath 
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
+	 * @param responseFields 
 	 * @param  callback callback handler for asynchronous operations
 	 * @return com.mozu.api.contracts.appdev.FileMetadata
 	 * @see com.mozu.api.contracts.appdev.FileMetadata
@@ -257,7 +257,7 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Get GetPackageMetadata description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	FolderMetadata folderMetadata = application.getPackageMetadata( applicationKey);
@@ -272,7 +272,7 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Get GetPackageMetadata description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	CountDownLatch latch = application.getPackageMetadata( applicationKey, callback );
@@ -288,13 +288,13 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Get GetPackageMetadata description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	FolderMetadata folderMetadata = application.getPackageMetadata( applicationKey,  responseFields);
 	 * </code></pre></p>
 	 * @param applicationKey 
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
+	 * @param responseFields 
 	 * @return com.mozu.api.contracts.appdev.FolderMetadata
 	 * @see com.mozu.api.contracts.appdev.FolderMetadata
 	 */
@@ -308,13 +308,13 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Get GetPackageMetadata description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	CountDownLatch latch = application.getPackageMetadata( applicationKey,  responseFields, callback );
 	 *	latch.await()	 * </code></pre></p>
 	 * @param applicationKey 
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
+	 * @param responseFields 
 	 * @param  callback callback handler for asynchronous operations
 	 * @return com.mozu.api.contracts.appdev.FolderMetadata
 	 * @see com.mozu.api.contracts.appdev.FolderMetadata
@@ -328,14 +328,14 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Post UpsertPackageFile description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	FileMetadata fileMetadata = application.upsertPackageFile( stream,  applicationKey,  filepath,  contentType);
 	 * </code></pre></p>
 	 * @param applicationKey 
 	 * @param filepath 
-	 * @param stream Data stream that delivers information. Used to input and output data.
+	 * @param stream 
 	 * @return com.mozu.api.contracts.appdev.FileMetadata
 	 * @see com.mozu.api.contracts.appdev.FileMetadata
 	 * @see Stream
@@ -346,7 +346,7 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Post UpsertPackageFile description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	CountDownLatch latch = application.upsertPackageFile( stream,  applicationKey,  filepath,  contentType, callback );
@@ -354,7 +354,7 @@ public ApplicationResource(ApiContext apiContext)
 	 * @param applicationKey 
 	 * @param filepath 
 	 * @param  callback callback handler for asynchronous operations
-	 * @param stream Data stream that delivers information. Used to input and output data.
+	 * @param stream 
 	 * @return com.mozu.api.contracts.appdev.FileMetadata
 	 * @see com.mozu.api.contracts.appdev.FileMetadata
 	 * @see Stream
@@ -365,7 +365,7 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Post UpsertPackageFile description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	FileMetadata fileMetadata = application.upsertPackageFile( stream,  applicationKey,  filepath,  lastModifiedTime,  responseFields,  contentType);
@@ -373,8 +373,8 @@ public ApplicationResource(ApiContext apiContext)
 	 * @param applicationKey 
 	 * @param filepath 
 	 * @param lastModifiedTime 
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
-	 * @param stream Data stream that delivers information. Used to input and output data.
+	 * @param responseFields 
+	 * @param stream 
 	 * @return com.mozu.api.contracts.appdev.FileMetadata
 	 * @see com.mozu.api.contracts.appdev.FileMetadata
 	 * @see Stream
@@ -389,7 +389,7 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Post UpsertPackageFile description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	CountDownLatch latch = application.upsertPackageFile( stream,  applicationKey,  filepath,  lastModifiedTime,  responseFields,  contentType, callback );
@@ -397,9 +397,9 @@ public ApplicationResource(ApiContext apiContext)
 	 * @param applicationKey 
 	 * @param filepath 
 	 * @param lastModifiedTime 
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
+	 * @param responseFields 
 	 * @param  callback callback handler for asynchronous operations
-	 * @param stream Data stream that delivers information. Used to input and output data.
+	 * @param stream 
 	 * @return com.mozu.api.contracts.appdev.FileMetadata
 	 * @see com.mozu.api.contracts.appdev.FileMetadata
 	 * @see Stream
@@ -413,13 +413,13 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Post RenamePackageFile description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	FileMetadata fileMetadata = application.renamePackageFile( renameInfo,  applicationKey);
 	 * </code></pre></p>
 	 * @param applicationKey 
-	 * @param renameInfo Information required to update the name of a file in a package, which consists of the original name and the new name.
+	 * @param renameInfo 
 	 * @return com.mozu.api.contracts.appdev.FileMetadata
 	 * @see com.mozu.api.contracts.appdev.FileMetadata
 	 * @see com.mozu.api.contracts.appdev.RenameInfo
@@ -430,14 +430,14 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Post RenamePackageFile description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	CountDownLatch latch = application.renamePackageFile( renameInfo,  applicationKey, callback );
 	 *	latch.await()	 * </code></pre></p>
 	 * @param applicationKey 
 	 * @param  callback callback handler for asynchronous operations
-	 * @param renameInfo Information required to update the name of a file in a package, which consists of the original name and the new name.
+	 * @param renameInfo 
 	 * @return com.mozu.api.contracts.appdev.FileMetadata
 	 * @see com.mozu.api.contracts.appdev.FileMetadata
 	 * @see com.mozu.api.contracts.appdev.RenameInfo
@@ -448,14 +448,14 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Post RenamePackageFile description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	FileMetadata fileMetadata = application.renamePackageFile( renameInfo,  applicationKey,  responseFields);
 	 * </code></pre></p>
 	 * @param applicationKey 
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
-	 * @param renameInfo Information required to update the name of a file in a package, which consists of the original name and the new name.
+	 * @param responseFields 
+	 * @param renameInfo 
 	 * @return com.mozu.api.contracts.appdev.FileMetadata
 	 * @see com.mozu.api.contracts.appdev.FileMetadata
 	 * @see com.mozu.api.contracts.appdev.RenameInfo
@@ -470,15 +470,15 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Post RenamePackageFile description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	CountDownLatch latch = application.renamePackageFile( renameInfo,  applicationKey,  responseFields, callback );
 	 *	latch.await()	 * </code></pre></p>
 	 * @param applicationKey 
-	 * @param responseFields A list or array of fields returned for a call. These fields may be customized and may be used for various types of data calls in Mozu. For example, responseFields are returned for retrieving or updating attributes, carts, and messages in Mozu.
+	 * @param responseFields 
 	 * @param  callback callback handler for asynchronous operations
-	 * @param renameInfo Information required to update the name of a file in a package, which consists of the original name and the new name.
+	 * @param renameInfo 
 	 * @return com.mozu.api.contracts.appdev.FileMetadata
 	 * @see com.mozu.api.contracts.appdev.FileMetadata
 	 * @see com.mozu.api.contracts.appdev.RenameInfo
@@ -492,7 +492,7 @@ public ApplicationResource(ApiContext apiContext)
 	}
 
 	/**
-	 * platform-developer Delete DeletePackageFile description DOCUMENT_HERE 
+	 * 
 	 * <p><pre><code>
 	 *	Application application = new Application();
 	 *	application.deletePackageFile( applicationKey,  filepath);

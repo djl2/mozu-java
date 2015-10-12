@@ -44,17 +44,4 @@ public class PublishingScope implements Serializable
 		this.productCodes = productCodes;
 	}
 
-	/**
-	 * The Publish Set to publish
-	 */
-	protected String publishSetCode;
-
-	public String getPublishSetCode() {
-		return this.publishSetCode;
-	}
-
-	public void setPublishSetCode(String publishSetCode) {
-		this.publishSetCode = publishSetCode;
-	}
-
 }

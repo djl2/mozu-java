@@ -47,9 +47,6 @@ public class SiteSearchSettings implements Serializable
 		this.isDefault = isDefault;
 	}
 
-	/**
-	 * Mozu.ProductAdmin.Contracts.SiteSearchSettings minimumMatchPercent ApiTypeMember DOCUMENT_HERE 
-	 */
 	protected Integer minimumMatchPercent;
 
 	public Integer getMinimumMatchPercent() {

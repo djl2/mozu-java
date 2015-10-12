@@ -12,7 +12,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.joda.time.DateTime;
 import com.mozu.api.contracts.productruntime.Facet;
 import com.mozu.api.contracts.productruntime.Product;
-import com.mozu.api.contracts.productruntime.SolrDebugInfo;
 
 /**
  *	The result of a product search.
@@ -92,19 +91,6 @@ public class ProductSearchResult implements Serializable
 	}
 	public void setItems(List<Product> items) {
 		this.items = items;
-	}
-
-	/**
-	 * Mozu.ProductRuntime.Contracts.ProductSearchResult solrDebugInfo ApiTypeMember DOCUMENT_HERE 
-	 */
-	protected SolrDebugInfo solrDebugInfo;
-
-	public SolrDebugInfo getSolrDebugInfo() {
-		return this.solrDebugInfo;
-	}
-
-	public void setSolrDebugInfo(SolrDebugInfo solrDebugInfo) {
-		this.solrDebugInfo = solrDebugInfo;
 	}
 
 }
